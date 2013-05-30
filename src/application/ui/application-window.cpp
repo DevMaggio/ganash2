@@ -3,6 +3,7 @@
 #include "application-window.h"
 #include "ui/icon-factory.h"
 
+#include "core/dock-manager.h"
 #include "core/action-manager.h"
 #include "core/action.h"
 

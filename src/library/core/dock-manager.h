@@ -8,6 +8,10 @@ class DockManager
 {
 public:
     DockManager();
+    virtual ~DockManager();
+    static DockManager* getInstance();
+protected:
+    static DockManager* _instance;
 };
 
 } // namespace Core

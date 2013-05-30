@@ -2,6 +2,7 @@ noinst_LTLIBRARIES = libcore.la
 libcore_la_SOURCES  = \
     action.cpp \
     command.cpp \
+    dock-manager.cpp \
     action-manager.cpp \
     action-container.cpp
 
