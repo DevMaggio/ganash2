@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GdlDockTablabel</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="GNOME Docking Library Reference Manual">
+<link rel="up" href="deprecated.html" title="Deprecated Classes">
+<link rel="prev" href="GdlDockPlaceholder.html" title="GdlDockPlaceHolder">
+<link rel="next" href="api-index-full.html" title="API Index">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GdlDockPlaceholder.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="deprecated.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GNOME Docking Library Reference Manual</th>
+<td><a accesskey="n" href="api-index-full.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GdlDockTablabel.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GdlDockTablabel.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GdlDockTablabel.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GdlDockTablabel.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#GdlDockTablabel.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#GdlDockTablabel.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GdlDockTablabel"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GdlDockTablabel.top_of_page"></a>GdlDockTablabel</span></h2>
+<p>GdlDockTablabel — A custom label widget.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GdlDockTablabel.stability-level"></a><h2>Stability Level</h2>
+Unstable, unless otherwise indicated
+</div>
+<div class="refsynopsisdiv">
+<a name="GdlDockTablabel.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GdlDockTablabel.html#GdlDockTablabel-struct" title="struct GdlDockTablabel">GdlDockTablabel</a>;
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="GdlDockTablabel.html#gdl-dock-tablabel-new" title="gdl_dock_tablabel_new ()">gdl_dock_tablabel_new</a>               (<em class="parameter"><code><a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a> *item</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GdlDockTablabel.html#gdl-dock-tablabel-activate" title="gdl_dock_tablabel_activate ()">gdl_dock_tablabel_activate</a>          (<em class="parameter"><code><a class="link" href="GdlDockTablabel.html" title="GdlDockTablabel"><span class="type">GdlDockTablabel</span></a> *tablabel</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GdlDockTablabel.html#gdl-dock-tablabel-deactivate" title="gdl_dock_tablabel_deactivate ()">gdl_dock_tablabel_deactivate</a>        (<em class="parameter"><code><a class="link" href="GdlDockTablabel.html" title="GdlDockTablabel"><span class="type">GdlDockTablabel</span></a> *tablabel</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDockTablabel.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----GtkWidget
+               +----GtkContainer
+                     +----GtkBin
+                           +----GdlDockTablabel
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDockTablabel.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GdlDockTablabel implements
+ AtkImplementorIface and  GtkBuildable.</p>
+</div>
+<div class="refsect1">
+<a name="GdlDockTablabel.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GdlDockTablabel.html#GdlDockTablabel--item" title='The "item" property'>item</a>"                     <a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a>*          : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDockTablabel.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="GdlDockTablabel.html#GdlDockTablabel-button-pressed-handle" title='The "button-pressed-handle" signal'>button-pressed-handle</a>"                          : <code class="literal">Run Last</code>
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDockTablabel.description"></a><h2>Description</h2>
+<p>
+This is a deprecated label widget in GDL 3.6.
+</p>
+</div>
+<div class="refsect1">
+<a name="GdlDockTablabel.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GdlDockTablabel-struct"></a><h3>struct GdlDockTablabel</h3>
+<pre class="programlisting">struct GdlDockTablabel;</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">GdlDockTablabel</code> is deprecated and should not be used in newly-written code.</p>
+</div>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-tablabel-new"></a><h3>gdl_dock_tablabel_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         gdl_dock_tablabel_new               (<em class="parameter"><code><a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a> *item</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">gdl_dock_tablabel_new</code> has been deprecated since version 3.6 and should not be used in newly-written code. Use a <span class="type">GtkLabel</span> instead</p>
+</div>
+<p>
+Creates a new GDL tab label widget.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>item</code></em> :</span></p></td>
+<td>The dock item that associated with this label widget.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a new <a class="link" href="GdlDockTablabel.html" title="GdlDockTablabel"><span class="type">GdlDockTablabel</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-tablabel-activate"></a><h3>gdl_dock_tablabel_activate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gdl_dock_tablabel_activate          (<em class="parameter"><code><a class="link" href="GdlDockTablabel.html" title="GdlDockTablabel"><span class="type">GdlDockTablabel</span></a> *tablabel</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">gdl_dock_tablabel_activate</code> has been deprecated since version 3.6 and should not be used in newly-written code. </p>
+</div>
+<p>
+Set the widget in "activated" state.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>tablabel</code></em> :</span></p></td>
+<td>A <a class="link" href="GdlDockTablabel.html" title="GdlDockTablabel"><span class="type">GdlDockTablabel</span></a> widget</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-tablabel-deactivate"></a><h3>gdl_dock_tablabel_deactivate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gdl_dock_tablabel_deactivate        (<em class="parameter"><code><a class="link" href="GdlDockTablabel.html" title="GdlDockTablabel"><span class="type">GdlDockTablabel</span></a> *tablabel</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">gdl_dock_tablabel_deactivate</code> has been deprecated since version 3.6 and should not be used in newly-written code. </p>
+</div>
+<p>
+Set the widget in "deactivated" state.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>tablabel</code></em> :</span></p></td>
+<td>A <a class="link" href="GdlDockTablabel.html" title="GdlDockTablabel"><span class="type">GdlDockTablabel</span></a> widget</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GdlDockTablabel.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GdlDockTablabel--item"></a><h3>The <code class="literal">"item"</code> property</h3>
+<pre class="programlisting">  "item"                     <a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a>*          : Read / Write</pre>
+<p>Dockitem which 'owns' this tablabel.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GdlDockTablabel.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GdlDockTablabel-button-pressed-handle"></a><h3>The <code class="literal">"button-pressed-handle"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="GdlDockTablabel.html" title="GdlDockTablabel"><span class="type">GdlDockTablabel</span></a> *label,
+                                                        <span class="type">GdkEvent</span>        *event,
+                                                        <span class="type">gpointer</span>         user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+This signal is emitted when the user clicks on the label.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>label</code></em> :</span></p></td>
+<td>The <a class="link" href="GdlDockTablabel.html" title="GdlDockTablabel"><span class="type">GdlDockTablabel</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>event</code></em> :</span></p></td>
+<td>A <span class="type">GdkEvent</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

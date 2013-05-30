@@ -1,0 +1,13 @@
+<dock-layout>
+	<layout name="__default__">
+		<dock name="__dock_1" floating="no" width="-1" height="-1" floatx="0" floaty="0">
+		<paned orientation="vertical" locked="no">
+			<paned orientation="horizontal" locked="no" position="34">
+				<item name="tools" orientation="vertical" locked="no" shrink="no" resize="no"/>
+				<item name="main" orientation="vertical" locked="no" />
+			</paned>
+			<item name="bottom" orientation="vertical" locked="yes"  height="10"/>
+		</paned>
+		</dock>
+	</layout>
+</dock-layout>

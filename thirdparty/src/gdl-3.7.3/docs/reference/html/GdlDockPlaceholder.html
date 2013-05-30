@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GdlDockPlaceHolder</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="GNOME Docking Library Reference Manual">
+<link rel="up" href="deprecated.html" title="Deprecated Classes">
+<link rel="prev" href="deprecated.html" title="Deprecated Classes">
+<link rel="next" href="GdlDockTablabel.html" title="GdlDockTablabel">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="deprecated.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="deprecated.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GNOME Docking Library Reference Manual</th>
+<td><a accesskey="n" href="GdlDockTablabel.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GdlDockPlaceholder.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GdlDockPlaceholder.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GdlDockPlaceholder.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GdlDockPlaceholder.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#GdlDockPlaceholder.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GdlDockPlaceholder"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GdlDockPlaceholder.top_of_page"></a>GdlDockPlaceHolder</span></h2>
+<p>GdlDockPlaceHolder — A widget marking a docking place.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GdlDockPlaceholder.stability-level"></a><h2>Stability Level</h2>
+Unstable, unless otherwise indicated
+</div>
+<div class="refsynopsisdiv">
+<a name="GdlDockPlaceholder.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GdlDockPlaceholder.html#GdlDockPlaceholder-struct" title="struct GdlDockPlaceholder">GdlDockPlaceholder</a>;
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="GdlDockPlaceholder.html#gdl-dock-placeholder-new" title="gdl_dock_placeholder_new ()">gdl_dock_placeholder_new</a>            (<em class="parameter"><code>const <span class="type">gchar</span> *name</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GdlDockObject.html" title="GdlDockObject"><span class="type">GdlDockObject</span></a> *object</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GdlDockObject.html#GdlDockPlacement" title="enum GdlDockPlacement"><span class="type">GdlDockPlacement</span></a> position</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> sticky</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GdlDockPlaceholder.html#gdl-dock-placeholder-attach" title="gdl_dock_placeholder_attach ()">gdl_dock_placeholder_attach</a>         (<em class="parameter"><code><a class="link" href="GdlDockPlaceholder.html" title="GdlDockPlaceHolder"><span class="type">GdlDockPlaceholder</span></a> *ph</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GdlDockObject.html" title="GdlDockObject"><span class="type">GdlDockObject</span></a> *object</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDockPlaceholder.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----GtkWidget
+               +----GtkContainer
+                     +----<a class="link" href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a>
+                           +----GdlDockPlaceholder
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDockPlaceholder.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GdlDockPlaceholder implements
+ AtkImplementorIface and  GtkBuildable.</p>
+</div>
+<div class="refsect1">
+<a name="GdlDockPlaceholder.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GdlDockPlaceholder.html#GdlDockPlaceholder--floating" title='The "floating" property'>floating</a>"                 <span class="type">gboolean</span>              : Read / Write / Construct Only
+  "<a class="link" href="GdlDockPlaceholder.html#GdlDockPlaceholder--floatx" title='The "floatx" property'>floatx</a>"                   <span class="type">gint</span>                  : Read / Write / Construct Only
+  "<a class="link" href="GdlDockPlaceholder.html#GdlDockPlaceholder--floaty" title='The "floaty" property'>floaty</a>"                   <span class="type">gint</span>                  : Read / Write / Construct Only
+  "<a class="link" href="GdlDockPlaceholder.html#GdlDockPlaceholder--height" title='The "height" property'>height</a>"                   <span class="type">gint</span>                  : Read / Write / Construct
+  "<a class="link" href="GdlDockPlaceholder.html#GdlDockPlaceholder--host" title='The "host" property'>host</a>"                     <a class="link" href="GdlDockObject.html" title="GdlDockObject"><span class="type">GdlDockObject</span></a>*        : Read / Write
+  "<a class="link" href="GdlDockPlaceholder.html#GdlDockPlaceholder--next-placement" title='The "next-placement" property'>next-placement</a>"           <a class="link" href="GdlDockObject.html#GdlDockPlacement" title="enum GdlDockPlacement"><span class="type">GdlDockPlacement</span></a>      : Read / Write
+  "<a class="link" href="GdlDockPlaceholder.html#GdlDockPlaceholder--sticky" title='The "sticky" property'>sticky</a>"                   <span class="type">gboolean</span>              : Read / Write / Construct Only
+  "<a class="link" href="GdlDockPlaceholder.html#GdlDockPlaceholder--width" title='The "width" property'>width</a>"                    <span class="type">gint</span>                  : Read / Write / Construct
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDockPlaceholder.description"></a><h2>Description</h2>
+<p>
+A dock placeholder is a widget allowing to keep track of a docking place.
+Unfortunately, all the details of the initial goal have been forgotten and
+the code has still some issues.
+</p>
+<p>
+In GDL 3.6, this part has been deprecated. Placeholder widgets are not
+used anymore. Instead, closed widgets are hidden but kept in the widget
+hierarchy.
+</p>
+</div>
+<div class="refsect1">
+<a name="GdlDockPlaceholder.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GdlDockPlaceholder-struct"></a><h3>struct GdlDockPlaceholder</h3>
+<pre class="programlisting">struct GdlDockPlaceholder;</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">GdlDockPlaceholder</code> is deprecated and should not be used in newly-written code.</p>
+</div>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-placeholder-new"></a><h3>gdl_dock_placeholder_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         gdl_dock_placeholder_new            (<em class="parameter"><code>const <span class="type">gchar</span> *name</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GdlDockObject.html" title="GdlDockObject"><span class="type">GdlDockObject</span></a> *object</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GdlDockObject.html#GdlDockPlacement" title="enum GdlDockPlacement"><span class="type">GdlDockPlacement</span></a> position</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> sticky</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">gdl_dock_placeholder_new</code> has been deprecated since version 3.6 and should not be used in newly-written code. </p>
+</div>
+<p>
+Creates a new dock placeholder at <em class="parameter"><code>object</code></em> place. This is a kind of marker
+allowing you to dock new items later at this place. It is not completely
+working though.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>Unique name for identifying the dock object.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>object</code></em> :</span></p></td>
+<td>Corresponding <a class="link" href="GdlDockObject.html" title="GdlDockObject"><span class="type">GdlDockObject</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>position</code></em> :</span></p></td>
+<td>The position to dock a new item in <em class="parameter"><code>object</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sticky</code></em> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> if the placeholder move with the <em class="parameter"><code>object</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The newly created placeholder.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-placeholder-attach"></a><h3>gdl_dock_placeholder_attach ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gdl_dock_placeholder_attach         (<em class="parameter"><code><a class="link" href="GdlDockPlaceholder.html" title="GdlDockPlaceHolder"><span class="type">GdlDockPlaceholder</span></a> *ph</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GdlDockObject.html" title="GdlDockObject"><span class="type">GdlDockObject</span></a> *object</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">gdl_dock_placeholder_attach</code> has been deprecated since version 3.6 and should not be used in newly-written code. </p>
+</div>
+<p>
+Move the placeholder to the position of <em class="parameter"><code>object</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ph</code></em> :</span></p></td>
+<td>The <a class="link" href="GdlDockPlaceholder.html" title="GdlDockPlaceHolder"><span class="type">GdlDockPlaceholder</span></a> object</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>object</code></em> :</span></p></td>
+<td>A new <a class="link" href="GdlDockObject.html" title="GdlDockObject"><span class="type">GdlDockObject</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GdlDockPlaceholder.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GdlDockPlaceholder--floating"></a><h3>The <code class="literal">"floating"</code> property</h3>
+<pre class="programlisting">  "floating"                 <span class="type">gboolean</span>              : Read / Write / Construct Only</pre>
+<p>Whether the placeholder is standing in for a floating toplevel dock.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GdlDockPlaceholder--floatx"></a><h3>The <code class="literal">"floatx"</code> property</h3>
+<pre class="programlisting">  "floatx"                   <span class="type">gint</span>                  : Read / Write / Construct Only</pre>
+<p>X coordinate for dock when floating.</p>
+<p>Allowed values: &gt;= G_MAXULONG</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GdlDockPlaceholder--floaty"></a><h3>The <code class="literal">"floaty"</code> property</h3>
+<pre class="programlisting">  "floaty"                   <span class="type">gint</span>                  : Read / Write / Construct Only</pre>
+<p>Y coordinate for dock when floating.</p>
+<p>Allowed values: &gt;= G_MAXULONG</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GdlDockPlaceholder--height"></a><h3>The <code class="literal">"height"</code> property</h3>
+<pre class="programlisting">  "height"                   <span class="type">gint</span>                  : Read / Write / Construct</pre>
+<p>Height for the widget when it's attached to the placeholder.</p>
+<p>Allowed values: &gt;= G_MAXULONG</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GdlDockPlaceholder--host"></a><h3>The <code class="literal">"host"</code> property</h3>
+<pre class="programlisting">  "host"                     <a class="link" href="GdlDockObject.html" title="GdlDockObject"><span class="type">GdlDockObject</span></a>*        : Read / Write</pre>
+<p>The dock object this placeholder is attached to.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GdlDockPlaceholder--next-placement"></a><h3>The <code class="literal">"next-placement"</code> property</h3>
+<pre class="programlisting">  "next-placement"           <a class="link" href="GdlDockObject.html#GdlDockPlacement" title="enum GdlDockPlacement"><span class="type">GdlDockPlacement</span></a>      : Read / Write</pre>
+<p>The position an item will be docked to our host if a request is made to dock to us.</p>
+<p>Default value: GDL_DOCK_CENTER</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GdlDockPlaceholder--sticky"></a><h3>The <code class="literal">"sticky"</code> property</h3>
+<pre class="programlisting">  "sticky"                   <span class="type">gboolean</span>              : Read / Write / Construct Only</pre>
+<p>Whether the placeholder will stick to its host or move up the hierarchy when the host is redocked.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GdlDockPlaceholder--width"></a><h3>The <code class="literal">"width"</code> property</h3>
+<pre class="programlisting">  "width"                    <span class="type">gint</span>                  : Read / Write / Construct</pre>
+<p>Width for the widget when it's attached to the placeholder.</p>
+<p>Allowed values: &gt;= G_MAXULONG</p>
+<p>Default value: -1</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

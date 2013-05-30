@@ -1,0 +1,46 @@
+<!-- ##### SECTION Title ##### -->
+GdlPreviewWindow
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GdlPreviewWindow ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION gdl_preview_window_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_preview_window_update ##### -->
+<para>
+
+</para>
+
+@window: 
+@rect: 
+
+

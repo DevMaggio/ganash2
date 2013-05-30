@@ -1,0 +1,51 @@
+<!-- ##### SECTION Title ##### -->
+gdlseal
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### MACRO GDK_HAVE_WCHAR_H ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO GDK_HAVE_WCTYPE_H ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO GDK_WINDOWING_X11 ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO GSEAL ##### -->
+<para>
+
+</para>
+
+@ident: 
+
+

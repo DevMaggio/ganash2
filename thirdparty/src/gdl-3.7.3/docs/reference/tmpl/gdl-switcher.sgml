@@ -1,0 +1,58 @@
+<!-- ##### SECTION Title ##### -->
+GdlSwitcher
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GdlSwitcher ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GdlSwitcher:switcher-style ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gdl_switcher_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_switcher_insert_page ##### -->
+<para>
+
+</para>
+
+@switcher: 
+@page: 
+@tab_widget: 
+@label: 
+@tooltips: 
+@stock_id: 
+@pixbuf_icon: 
+@position: 
+@Returns: 
+
+

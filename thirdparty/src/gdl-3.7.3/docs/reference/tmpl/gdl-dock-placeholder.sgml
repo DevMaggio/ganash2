@@ -1,0 +1,89 @@
+<!-- ##### SECTION Title ##### -->
+GdlDockPlaceholder
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GdlDockPlaceholder ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GdlDockPlaceholder:floating ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockPlaceholder:floatx ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockPlaceholder:floaty ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockPlaceholder:height ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockPlaceholder:host ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockPlaceholder:next-placement ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockPlaceholder:sticky ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockPlaceholder:width ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gdl_dock_placeholder_new ##### -->
+<para>
+
+</para>
+
+@name: 
+@object: 
+@position: 
+@sticky: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_placeholder_attach ##### -->
+<para>
+
+</para>
+
+@ph: 
+@object: 
+
+

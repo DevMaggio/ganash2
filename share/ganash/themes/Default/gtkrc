@@ -1,0 +1,34 @@
+gtk_color_scheme = "fg_color:#ECE9E9;bg_color:#ECE9E9;base_color:#FFFFFF;text_color:#00ff00;selected_bg_color:#008DD7;selected_fg_color:#FFFFFF;tooltip_bg_color:#000000;tooltip_fg_color:#F5F5B5"
+style "theme-fixes" {
+
+  fg[NORMAL]        = @fg_color
+  fg[PRELIGHT]      = @fg_color
+  fg[SELECTED]      = @selected_fg_color
+  fg[ACTIVE]        = @fg_color
+  fg[INSENSITIVE]   = darker (@bg_color)
+
+  bg[NORMAL]        = @bg_color
+  bg[PRELIGHT]      = shade (1.02, @bg_color)
+  bg[SELECTED]      = @selected_bg_color
+  bg[INSENSITIVE]   = @bg_color
+  bg[ACTIVE]        = shade (0.9, @bg_color)
+
+  base[NORMAL]      = @base_color
+  base[PRELIGHT]    = shade (0.95, @bg_color)
+  base[ACTIVE]      = shade (0.9, @selected_bg_color)
+  base[SELECTED]    = @selected_bg_color
+  base[INSENSITIVE] = @bg_color
+
+  text[NORMAL]      = @text_color
+  text[PRELIGHT]    = @text_color
+  text[ACTIVE]      = @selected_fg_color
+  text[SELECTED]    = @selected_fg_color
+  text[INSENSITIVE] = darker (@bg_color)
+
+  GtkTreeView::odd_row_color  = shade (0.929458256, @base_color)
+  GtkTreeView::even_row_color = @base_color
+  GtkTreeView::horizontal-separator = 12
+
+      font_name = "Helvetica World 7"
+ }
+ class "*" style "theme-fixes"

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/143592/releases/WebKitGTK/webkit-2.0/Source/WebCore/xml/parser
+END
+XMLDocumentParserScope.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repository/webkit/!svn/ver/143592/releases/WebKitGTK/webkit-2.0/Source/WebCore/xml/parser/XMLDocumentParserScope.h
+END
+XMLDocumentParser.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repository/webkit/!svn/ver/143592/releases/WebKitGTK/webkit-2.0/Source/WebCore/xml/parser/XMLDocumentParser.cpp
+END
+CharacterReferenceParserInlines.h
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repository/webkit/!svn/ver/143592/releases/WebKitGTK/webkit-2.0/Source/WebCore/xml/parser/CharacterReferenceParserInlines.h
+END
+MarkupTokenizerInlines.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repository/webkit/!svn/ver/143592/releases/WebKitGTK/webkit-2.0/Source/WebCore/xml/parser/MarkupTokenizerInlines.h
+END
+XMLDocumentParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repository/webkit/!svn/ver/143592/releases/WebKitGTK/webkit-2.0/Source/WebCore/xml/parser/XMLDocumentParser.h
+END
+XMLDocumentParserQt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repository/webkit/!svn/ver/143592/releases/WebKitGTK/webkit-2.0/Source/WebCore/xml/parser/XMLDocumentParserQt.cpp
+END
+XMLDocumentParserLibxml2.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repository/webkit/!svn/ver/143592/releases/WebKitGTK/webkit-2.0/Source/WebCore/xml/parser/XMLDocumentParserLibxml2.cpp
+END
+XMLDocumentParserScope.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repository/webkit/!svn/ver/143592/releases/WebKitGTK/webkit-2.0/Source/WebCore/xml/parser/XMLDocumentParserScope.cpp
+END

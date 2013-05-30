@@ -1,0 +1,19 @@
+<dock-layout>
+	<layout name="__default__">
+		<dock name="__dock_1" floating="no" width="-1" height="-1" floatx="0" floaty="0">
+			<paned orientation="vertical" locked="no">
+				<paned orientation="horizontal" locked="no" position="34">
+					<item name="tools" orientation="vertical" locked="no" shrink="no" resize="no"/>
+					<paned orientation="horizontal" locked="no" position="1024">
+						<item name="main" orientation="vertical" locked="no" />
+						<paned orientation="vertical" locked="no" position="127" resize="no">
+							<item name="properties_a" orientation="vertical" locked="no" resize="yes"/>
+							<item name="properties_b" orientation="vertical" locked="no" resize="yes"/>
+						</paned>
+					</paned>
+				</paned>
+				<item name="bottom" orientation="vertical" locked="yes"  height="40"/>
+			</paned>
+		</dock>
+	</layout>
+</dock-layout>

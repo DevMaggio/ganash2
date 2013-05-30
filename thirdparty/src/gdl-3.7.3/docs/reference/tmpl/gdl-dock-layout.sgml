@@ -1,0 +1,123 @@
+<!-- ##### SECTION Title ##### -->
+GdlDockLayout
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GdlDockLayout ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GdlDockLayout:dirty ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockLayout:master ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gdl_dock_layout_new ##### -->
+<para>
+
+</para>
+
+@master: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_layout_attach ##### -->
+<para>
+
+</para>
+
+@layout: 
+@master: 
+
+
+<!-- ##### FUNCTION gdl_dock_layout_delete_layout ##### -->
+<para>
+
+</para>
+
+@layout: 
+@name: 
+
+
+<!-- ##### FUNCTION gdl_dock_layout_get_layouts ##### -->
+<para>
+
+</para>
+
+@layout: 
+@include_default: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_layout_is_dirty ##### -->
+<para>
+
+</para>
+
+@layout: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_layout_load_layout ##### -->
+<para>
+
+</para>
+
+@layout: 
+@name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_layout_load_from_file ##### -->
+<para>
+
+</para>
+
+@layout: 
+@filename: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_layout_save_layout ##### -->
+<para>
+
+</para>
+
+@layout: 
+@name: 
+
+
+<!-- ##### FUNCTION gdl_dock_layout_save_to_file ##### -->
+<para>
+
+</para>
+
+@layout: 
+@filename: 
+@Returns: 
+
+

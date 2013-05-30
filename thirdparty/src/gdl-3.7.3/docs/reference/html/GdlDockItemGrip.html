@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GdlDockItemGrip</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="GNOME Docking Library Reference Manual">
+<link rel="up" href="private.html" title="Private Classes">
+<link rel="prev" href="private.html" title="Private Classes">
+<link rel="next" href="GdlDockItemButtonImage.html" title="GdlDockItemButtonImage">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="private.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="private.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GNOME Docking Library Reference Manual</th>
+<td><a accesskey="n" href="GdlDockItemButtonImage.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GdlDockItemGrip.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GdlDockItemGrip.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GdlDockItemGrip.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GdlDockItemGrip.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#GdlDockItemGrip.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GdlDockItemGrip"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GdlDockItemGrip.top_of_page"></a>GdlDockItemGrip</span></h2>
+<p>GdlDockItemGrip — A grip for dock widgets.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GdlDockItemGrip.stability-level"></a><h2>Stability Level</h2>
+Private, unless otherwise indicated
+</div>
+<div class="refsynopsisdiv">
+<a name="GdlDockItemGrip.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GdlDockItemGrip.html#GdlDockItemGrip-struct" title="struct GdlDockItemGrip">GdlDockItemGrip</a>;
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="GdlDockItemGrip.html#gdl-dock-item-grip-new" title="gdl_dock_item_grip_new ()">gdl_dock_item_grip_new</a>              (<em class="parameter"><code><a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a> *item</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GdlDockItemGrip.html#gdl-dock-item-grip-set-label" title="gdl_dock_item_grip_set_label ()">gdl_dock_item_grip_set_label</a>        (<em class="parameter"><code><a class="link" href="GdlDockItemGrip.html" title="GdlDockItemGrip"><span class="type">GdlDockItemGrip</span></a> *grip</code></em>,
+                                                         <em class="parameter"><code><span class="type">GtkWidget</span> *label</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GdlDockItemGrip.html#gdl-dock-item-grip-show-handle" title="gdl_dock_item_grip_show_handle ()">gdl_dock_item_grip_show_handle</a>      (<em class="parameter"><code><a class="link" href="GdlDockItemGrip.html" title="GdlDockItemGrip"><span class="type">GdlDockItemGrip</span></a> *grip</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GdlDockItemGrip.html#gdl-dock-item-grip-hide-handle" title="gdl_dock_item_grip_hide_handle ()">gdl_dock_item_grip_hide_handle</a>      (<em class="parameter"><code><a class="link" href="GdlDockItemGrip.html" title="GdlDockItemGrip"><span class="type">GdlDockItemGrip</span></a> *grip</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDockItemGrip.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----GtkWidget
+               +----GtkContainer
+                     +----GdlDockItemGrip
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDockItemGrip.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GdlDockItemGrip implements
+ AtkImplementorIface and  GtkBuildable.</p>
+</div>
+<div class="refsect1">
+<a name="GdlDockItemGrip.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GdlDockItemGrip.html#GdlDockItemGrip--item" title='The "item" property'>item</a>"                     <a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a>*          : Write / Construct Only
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDockItemGrip.description"></a><h2>Description</h2>
+<p>
+This widget contains an area where the user can click to drag the dock item
+and two buttons. The first button allows to iconify the dock item.
+The second one allows to close the dock item.
+</p>
+</div>
+<div class="refsect1">
+<a name="GdlDockItemGrip.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GdlDockItemGrip-struct"></a><h3>struct GdlDockItemGrip</h3>
+<pre class="programlisting">struct GdlDockItemGrip;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-item-grip-new"></a><h3>gdl_dock_item_grip_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         gdl_dock_item_grip_new              (<em class="parameter"><code><a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a> *item</code></em>);</pre>
+<p>
+Creates a new GDL dock item grip object.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>item</code></em> :</span></p></td>
+<td>The dock item that will "own" this grip widget.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The newly created dock item grip widget.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-item-grip-set-label"></a><h3>gdl_dock_item_grip_set_label ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gdl_dock_item_grip_set_label        (<em class="parameter"><code><a class="link" href="GdlDockItemGrip.html" title="GdlDockItemGrip"><span class="type">GdlDockItemGrip</span></a> *grip</code></em>,
+                                                         <em class="parameter"><code><span class="type">GtkWidget</span> *label</code></em>);</pre>
+<p>
+Replaces the current label widget with another widget.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>grip</code></em> :</span></p></td>
+<td>The grip that will get it's label widget set.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>label</code></em> :</span></p></td>
+<td>The widget that will become the label.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-item-grip-show-handle"></a><h3>gdl_dock_item_grip_show_handle ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gdl_dock_item_grip_show_handle      (<em class="parameter"><code><a class="link" href="GdlDockItemGrip.html" title="GdlDockItemGrip"><span class="type">GdlDockItemGrip</span></a> *grip</code></em>);</pre>
+<p>
+This function shows the dock item's grip widget handle hatching.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>grip</code></em> :</span></p></td>
+<td>The dock item grip to show the handle of.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-item-grip-hide-handle"></a><h3>gdl_dock_item_grip_hide_handle ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gdl_dock_item_grip_hide_handle      (<em class="parameter"><code><a class="link" href="GdlDockItemGrip.html" title="GdlDockItemGrip"><span class="type">GdlDockItemGrip</span></a> *grip</code></em>);</pre>
+<p>
+This function hides the dock item's grip widget handle hatching.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>grip</code></em> :</span></p></td>
+<td>The dock item grip to hide the handle of.</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GdlDockItemGrip.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GdlDockItemGrip--item"></a><h3>The <code class="literal">"item"</code> property</h3>
+<pre class="programlisting">  "item"                     <a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a>*          : Write / Construct Only</pre>
+<p>Dockitem which 'owns' this grip.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GdlDockItemGrip.see-also"></a><h2>See Also</h2>
+GtlDockItem, GdlDockItemButtonImage
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

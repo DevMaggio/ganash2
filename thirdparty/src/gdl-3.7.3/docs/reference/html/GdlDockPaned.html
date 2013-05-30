@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GdlDockPaned</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="GNOME Docking Library Reference Manual">
+<link rel="up" href="widget.html" title="Widgets">
+<link rel="prev" href="GdlDockNotebook.html" title="GdlDockNotebook">
+<link rel="next" href="GdlDockItem.html" title="GdlDockItem">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GdlDockNotebook.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="widget.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GNOME Docking Library Reference Manual</th>
+<td><a accesskey="n" href="GdlDockItem.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GdlDockPaned.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GdlDockPaned.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GdlDockPaned.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GdlDockPaned.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#GdlDockPaned.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GdlDockPaned"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GdlDockPaned.top_of_page"></a>GdlDockPaned</span></h2>
+<p>GdlDockPaned — Arrange dock widget in two adjustable panes</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GdlDockPaned.stability-level"></a><h2>Stability Level</h2>
+Unstable, unless otherwise indicated
+</div>
+<div class="refsynopsisdiv">
+<a name="GdlDockPaned.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GdlDockPaned.html#GdlDockPaned-struct" title="struct GdlDockPaned">GdlDockPaned</a>;
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="GdlDockPaned.html#gdl-dock-paned-new" title="gdl_dock_paned_new ()">gdl_dock_paned_new</a>                  (<em class="parameter"><code><span class="type">GtkOrientation</span> orientation</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDockPaned.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----GtkWidget
+               +----GtkContainer
+                     +----<a class="link" href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a>
+                           +----<a class="link" href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a>
+                                 +----GdlDockPaned
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDockPaned.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GdlDockPaned implements
+ AtkImplementorIface and  GtkBuildable.</p>
+</div>
+<div class="refsect1">
+<a name="GdlDockPaned.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GdlDockPaned.html#GdlDockPaned--position" title='The "position" property'>position</a>"                 <span class="type">guint</span>                 : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDockPaned.description"></a><h2>Description</h2>
+<p>
+A <a class="link" href="GdlDockPaned.html" title="GdlDockPaned"><span class="type">GdlDockPaned</span></a> is a compound dock widget. It can dock one or two children,
+including another compound widget like a <a class="link" href="GdlDockPaned.html" title="GdlDockPaned"><span class="type">GdlDockPaned</span></a> or a <a class="link" href="GdlDockNotebook.html" title="GdlDockNotebook"><span class="type">GdlDockNotebook</span></a>.
+The children are displayed in two panes using a <span class="type">GtkPaned</span> widget.
+A <a class="link" href="GdlDockPaned.html" title="GdlDockPaned"><span class="type">GdlDockPaned</span></a> is normally created automatically by the master when docking
+a child on any edge: top, bottom, left or right.
+</p>
+</div>
+<div class="refsect1">
+<a name="GdlDockPaned.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GdlDockPaned-struct"></a><h3>struct GdlDockPaned</h3>
+<pre class="programlisting">struct GdlDockPaned;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-paned-new"></a><h3>gdl_dock_paned_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         gdl_dock_paned_new                  (<em class="parameter"><code><span class="type">GtkOrientation</span> orientation</code></em>);</pre>
+<p>
+Creates a new manual <a class="link" href="GdlDockPaned.html" title="GdlDockPaned"><span class="type">GdlDockPaned</span></a> widget. This function is seldom useful as
+such widget is normally created and destroyed automatically when needed by
+the master.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>orientation</code></em> :</span></p></td>
+<td>the pane's orientation.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a new <a class="link" href="GdlDockPaned.html" title="GdlDockPaned"><span class="type">GdlDockPaned</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GdlDockPaned.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GdlDockPaned--position"></a><h3>The <code class="literal">"position"</code> property</h3>
+<pre class="programlisting">  "position"                 <span class="type">guint</span>                 : Read / Write</pre>
+<p>Position of the divider in pixels.</p>
+<p>Allowed values: &lt;= G_MAXINT</p>
+<p>Default value: 0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GdlDockPaned.see-also"></a><h2>See Also</h2>
+<a class="link" href="GdlDockNotebook.html" title="GdlDockNotebook"><span class="type">GdlDockNotebook</span></a>, <a class="link" href="GdlDockMaster.html" title="GdlDockMaster"><span class="type">GdlDockMaster</span></a>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

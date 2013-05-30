@@ -1,0 +1,137 @@
+<!-- ##### SECTION Title ##### -->
+GdlDockMaster
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### MACRO GDL_DOCK_OBJECT_GET_MASTER ##### -->
+<para>
+
+</para>
+
+@object: 
+
+
+<!-- ##### STRUCT GdlDockMaster ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL GdlDockMaster::layout-changed ##### -->
+<para>
+
+</para>
+
+@gdldockmaster: the object which received the signal.
+
+<!-- ##### ARG GdlDockMaster:default-title ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockMaster:locked ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockMaster:switcher-style ##### -->
+<para>
+
+</para>
+
+<!-- ##### ENUM GdlSwitcherStyle ##### -->
+<para>
+
+</para>
+
+@GDL_SWITCHER_STYLE_TEXT: 
+@GDL_SWITCHER_STYLE_ICON: 
+@GDL_SWITCHER_STYLE_BOTH: 
+@GDL_SWITCHER_STYLE_TOOLBAR: 
+@GDL_SWITCHER_STYLE_TABS: 
+@GDL_SWITCHER_STYLE_NONE: 
+
+<!-- ##### FUNCTION gdl_dock_master_add ##### -->
+<para>
+
+</para>
+
+@master: 
+@object: 
+
+
+<!-- ##### FUNCTION gdl_dock_master_remove ##### -->
+<para>
+
+</para>
+
+@master: 
+@object: 
+
+
+<!-- ##### FUNCTION gdl_dock_master_set_controller ##### -->
+<para>
+
+</para>
+
+@master: 
+@new_controller: 
+
+
+<!-- ##### FUNCTION gdl_dock_master_get_controller ##### -->
+<para>
+
+</para>
+
+@master: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_master_get_object ##### -->
+<para>
+
+</para>
+
+@master: 
+@nick_name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_master_foreach ##### -->
+<para>
+
+</para>
+
+@master: 
+@function: 
+@user_data: 
+
+
+<!-- ##### FUNCTION gdl_dock_master_foreach_toplevel ##### -->
+<para>
+
+</para>
+
+@master: 
+@include_controller: 
+@function: 
+@user_data: 
+
+

@@ -1,0 +1,153 @@
+#ifndef GANASH_GEOM_POLYNOMIAL_H
+#define GANASH_GEOM_POLYNOMIAL_H
+
+#include <ostream>
+#include <vector>
+
+namespace Ganash {
+namespace Math {
+// Bernstein
+// DeCasteljau
+
+class Polynomial;
+
+class IPolynomial
+{
+public:
+    virtual unsigned int degree() const = 0;
+    virtual double getCoef(unsigned int i) const = 0;
+    virtual void setCoef(unsigned int i, double coef) = 0;
+    virtual double f(double x) = 0;// eval()
+    virtual Polynomial d() = 0;// derive()
+    virtual std::vector<double> roots() = 0;
+    virtual void toStream(std::ostream &stream) const = 0;
+};
+
+class Polynomial : public IPolynomial
+{
+public:
+
+    Polynomial(double a0, double a1=0.0, double a2=0.0, double a3=0.0);
+    Polynomial(std::vector<double> a);
+    ~Polynomial();
+    IPolynomial *_adapter;
+    unsigned int degree() const;
+    double getCoef(unsigned int i) const;
+    void setCoef(unsigned int i, double coef);
+
+    double f(double x);
+    Polynomial d();
+    //IPolynomial p(double k);
+    std::vector<double> roots();
+    void toStream(std::ostream &stream) const;
+
+    Polynomial& operator+=(Polynomial const& polynomial);
+
+
+    /**
+     * @brief The Constant class
+     * f(x) = a0
+     */
+    class Constant : public IPolynomial
+    {
+    public:
+        static const unsigned int DEGREE = 1;
+
+        Constant(double a0);
+        double _a[DEGREE];
+        unsigned int degree() const;
+        double getCoef(unsigned int i) const;
+        void setCoef(unsigned int i, double coef);
+        double f(double x);
+        Polynomial d();
+        std::vector<double> roots();
+        void toStream(std::ostream &stream) const;
+    };
+
+    /**
+     * @brief The Affine class
+     * f(x) = a1 * x  +  a0
+     */
+    class Affine : public IPolynomial
+    {
+    public:
+        static const unsigned int DEGREE = 2;
+
+        Affine(double a1, double a0);
+        double _a[DEGREE];
+        unsigned int degree() const;
+        double getCoef(unsigned int i) const;
+        void setCoef(unsigned int i, double coef);
+        double f(double x);
+        Polynomial d();
+        std::vector<double> roots();
+        void toStream(std::ostream &stream) const;
+    };
+
+    /**
+     * @brief The Quadratic class
+     * f(x) = a2 * x²  +  a1 * x  +  a0
+     */
+    class Quadratic : public IPolynomial
+    {
+    public:
+        static const unsigned int DEGREE = 3;
+
+        Quadratic(double a2, double a1, double a0);
+        double _a[DEGREE];
+        unsigned int degree() const;
+        double getCoef(unsigned int i) const;
+        void setCoef(unsigned int i, double coef);
+        double f(double x);
+        Polynomial d();
+        std::vector<double> roots();
+        void toStream(std::ostream &stream) const;
+
+    };
+    /**
+     * @brief The Cubic class
+     * f(x) = a3 * x³  +  a2 * x²  +  a1 * x  +  a0
+     */
+    class Cubic : public IPolynomial
+    {
+    public:
+        static const unsigned int DEGREE = 4;
+
+        Cubic(double a3, double a2, double a1, double a0);
+        double _a[DEGREE];
+        unsigned int degree() const;
+        double getCoef(unsigned int i) const;
+        void setCoef(unsigned int i, double coef);
+        double f(double x);
+        Polynomial d();
+        std::vector<double> roots();
+        void toStream(std::ostream &stream) const;
+    };
+    /**
+     * @brief The Generic class
+     * f(x) = an * x^n  +  an-1 * x^n-1  +  ... + a0 * x^0
+     */
+    class Generic : public IPolynomial
+    {
+    public:
+        Generic(std::vector<double> a);
+        std::vector<double> _a;
+        unsigned int _degree;
+        unsigned int degree() const;
+        double getCoef(unsigned int i) const;
+        void setCoef(unsigned int i, double coef);
+        double f(double x);
+        Polynomial d();
+        std::vector<double> roots();
+        void toStream(std::ostream &stream) const;
+    };
+};
+
+} // namespace Math
+} // namespace Ganash
+
+std::ostream& operator <<(std::ostream& stream, const Ganash::Math::IPolynomial& polynomial);
+//Ganash::Math::Polynomial::Cubic operator+(Ganash::Math::Polynomial::Cubic const& a, Ganash::Math::Polynomial::Cubic const& b);
+
+#endif // GANASH_GEOM_POLYNOMIAL_H
+

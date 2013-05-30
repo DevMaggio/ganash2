@@ -1,0 +1,67 @@
+<!-- ##### SECTION Title ##### -->
+GdlDockItemGrip
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GdlDockItemGrip ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GdlDockItemGrip:item ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gdl_dock_item_grip_new ##### -->
+<para>
+
+</para>
+
+@item: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_grip_set_label ##### -->
+<para>
+
+</para>
+
+@grip: 
+@label: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_grip_show_handle ##### -->
+<para>
+
+</para>
+
+@grip: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_grip_hide_handle ##### -->
+<para>
+
+</para>
+
+@grip: 
+
+

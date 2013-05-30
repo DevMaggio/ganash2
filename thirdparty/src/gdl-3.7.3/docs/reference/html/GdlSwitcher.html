@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GdlSwitcher</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="GNOME Docking Library Reference Manual">
+<link rel="up" href="private.html" title="Private Classes">
+<link rel="prev" href="GdlPreviewWindow.html" title="GdlPreviewWindow">
+<link rel="next" href="deprecated.html" title="Deprecated Classes">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GdlPreviewWindow.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="private.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GNOME Docking Library Reference Manual</th>
+<td><a accesskey="n" href="deprecated.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GdlSwitcher.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GdlSwitcher.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GdlSwitcher.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GdlSwitcher.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#GdlSwitcher.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GdlSwitcher"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GdlSwitcher.top_of_page"></a>GdlSwitcher</span></h2>
+<p>GdlSwitcher — An improved notebook widget.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GdlSwitcher.stability-level"></a><h2>Stability Level</h2>
+Unstable, unless otherwise indicated
+</div>
+<div class="refsynopsisdiv">
+<a name="GdlSwitcher.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GdlSwitcher.html#GdlSwitcher-struct" title="struct GdlSwitcher">GdlSwitcher</a>;
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="GdlSwitcher.html#gdl-switcher-new" title="gdl_switcher_new ()">gdl_switcher_new</a>                    (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">gint</span>                <a class="link" href="GdlSwitcher.html#gdl-switcher-insert-page" title="gdl_switcher_insert_page ()">gdl_switcher_insert_page</a>            (<em class="parameter"><code><a class="link" href="GdlSwitcher.html" title="GdlSwitcher"><span class="type">GdlSwitcher</span></a> *switcher</code></em>,
+                                                         <em class="parameter"><code><span class="type">GtkWidget</span> *page</code></em>,
+                                                         <em class="parameter"><code><span class="type">GtkWidget</span> *tab_widget</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *label</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *tooltips</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *stock_id</code></em>,
+                                                         <em class="parameter"><code><span class="type">GdkPixbuf</span> *pixbuf_icon</code></em>,
+                                                         <em class="parameter"><code><span class="type">gint</span> position</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlSwitcher.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----GtkWidget
+               +----GtkContainer
+                     +----GtkNotebook
+                           +----GdlSwitcher
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlSwitcher.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GdlSwitcher implements
+ AtkImplementorIface and  GtkBuildable.</p>
+</div>
+<div class="refsect1">
+<a name="GdlSwitcher.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GdlSwitcher.html#GdlSwitcher--switcher-style" title='The "switcher-style" property'>switcher-style</a>"           <a class="link" href="GdlDockMaster.html#GdlSwitcherStyle" title="enum GdlSwitcherStyle"><span class="type">GdlSwitcherStyle</span></a>      : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlSwitcher.description"></a><h2>Description</h2>
+<p>
+A <a class="link" href="GdlSwitcher.html" title="GdlSwitcher"><span class="type">GdlSwitcher</span></a> widget is an improved version of the <span class="type">GtkNotebook</span>. The
+tab labels could have different style and could be layouted on several lines.
+</p>
+<p>
+It is used by the <a class="link" href="GdlDockNotebook.html" title="GdlDockNotebook"><span class="type">GdlDockNotebook</span></a> widget to dock other widgets.
+</p>
+</div>
+<div class="refsect1">
+<a name="GdlSwitcher.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GdlSwitcher-struct"></a><h3>struct GdlSwitcher</h3>
+<pre class="programlisting">struct GdlSwitcher;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-switcher-new"></a><h3>gdl_switcher_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         gdl_switcher_new                    (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Creates a new notebook widget with no pages.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The newly created <a class="link" href="GdlSwitcher.html" title="GdlSwitcher"><span class="type">GdlSwitcher</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-switcher-insert-page"></a><h3>gdl_switcher_insert_page ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>                gdl_switcher_insert_page            (<em class="parameter"><code><a class="link" href="GdlSwitcher.html" title="GdlSwitcher"><span class="type">GdlSwitcher</span></a> *switcher</code></em>,
+                                                         <em class="parameter"><code><span class="type">GtkWidget</span> *page</code></em>,
+                                                         <em class="parameter"><code><span class="type">GtkWidget</span> *tab_widget</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *label</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *tooltips</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *stock_id</code></em>,
+                                                         <em class="parameter"><code><span class="type">GdkPixbuf</span> *pixbuf_icon</code></em>,
+                                                         <em class="parameter"><code><span class="type">gint</span> position</code></em>);</pre>
+<p>
+Adds a page to a <a class="link" href="GdlSwitcher.html" title="GdlSwitcher"><span class="type">GdlSwitcher</span></a>.  A button is created in the switcher, with its
+icon taken preferentially from the <em class="parameter"><code>stock_id</code></em> parameter.  If this parameter is
+<code class="literal">NULL</code>, then the <em class="parameter"><code>pixbuf_icon</code></em> parameter is used.  Failing that, the
+<code class="literal">GTK_STOCK_NEW</code> stock icon is used.  The text label for the button is specified
+using the <em class="parameter"><code>label</code></em> parameter.  If it is <code class="literal">NULL</code> then a default incrementally
+numbered label is used instead.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>switcher</code></em> :</span></p></td>
+<td>The switcher to which a page will be added</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>page</code></em> :</span></p></td>
+<td>The page to add to the switcher</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tab_widget</code></em> :</span></p></td>
+<td>The  to add to the switcher</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>label</code></em> :</span></p></td>
+<td>The label text for the button</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tooltips</code></em> :</span></p></td>
+<td>The tooltip for the button</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>stock_id</code></em> :</span></p></td>
+<td>The stock ID for the button icon</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pixbuf_icon</code></em> :</span></p></td>
+<td>The pixbuf to use for the button icon</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>position</code></em> :</span></p></td>
+<td>The position at which to create the page</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The index (starting from 0) of the appended page in the notebook, or -1 if function fails</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GdlSwitcher.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GdlSwitcher--switcher-style"></a><h3>The <code class="literal">"switcher-style"</code> property</h3>
+<pre class="programlisting">  "switcher-style"           <a class="link" href="GdlDockMaster.html#GdlSwitcherStyle" title="enum GdlSwitcherStyle"><span class="type">GdlSwitcherStyle</span></a>      : Read / Write</pre>
+<p>Switcher buttons style.</p>
+<p>Default value: GDL_SWITCHER_STYLE_BOTH</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GdlSwitcher.see-also"></a><h2>See Also</h2>
+<a class="link" href="GdlDockNotebook.html" title="GdlDockNotebook"><span class="type">GdlDockNotebook</span></a>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!-- ##### SECTION Title ##### -->
+GdlDockNotebook
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GdlDockNotebook ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GdlDockNotebook:page ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gdl_dock_notebook_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+

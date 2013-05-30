@@ -1,0 +1,92 @@
+
+Tree Object :
+-------------
+
+Ganash::Application
+  |
+  +--> Ganash::Window
+  |      |
+  |      +--> Ganash::ActionManager (based on Gtk::UIManager)
+  |      |      |
+  |      |      +--> Ganash::ActionContainer
+  |      |      +--> Ganash::ActionGroup
+  |      |      +--> Ganash::Action
+  |      |      |      |
+  |      |      |      +--> Ganash::Command
+  |      |      |      |
+  |      |      |
+  |      +--> Ganash::ContainerManager
+  |      |      |
+  |      |      +--> Ganash::DockManager (based on Gdl::DockMaster)
+  |      |      |
+  |      |
+  |
+
+
+
+
+
+Tree Layout :
+-------------
+plugin {
+	widget_properties : 
+	widget_foo : 
+	widget_bar : 
+}
+
+org.ganash/Main
+org.ganash.plugin.welcome/Main
+org.ganash.plugin.illustrator/Main
+org.ganash.plugin.animator/Main
+
+
+<dock-layout>
+	<layout name="__default__">
+		<dock name="__dock_1" floating="no" width="-1" height="-1" floatx="0" floaty="0">
+			<item name="plugin.welcome.Main/1.0" orientation="vertical" locked="no" />
+		</dock>
+	</layout>
+</dock-layout>
+
+
+<dock>
+	<layout name="__default__">
+		<dock name="__dock_1" floating="no" width="-1" height="-1" floatx="0" floaty="0">
+			<item name="plugin.welcome.Main/1.0" orientation="vertical" locked="no" />
+		</dock>
+	</layout>
+</dock>
+
+<ui>
+	<layout name="__default">
+		<dock name="__dock_1" floating="no" width="-1" height="-1" floatx="0" floaty="0">
+			<item name="plugin.welcome.Main/1.0" orientation="vertical" locked="no" />
+		</dock>
+	</layout>
+</ui>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

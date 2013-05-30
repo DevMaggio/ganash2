@@ -1,0 +1,553 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GdlDock</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="GNOME Docking Library Reference Manual">
+<link rel="up" href="widget.html" title="Widgets">
+<link rel="prev" href="widget.html" title="Widgets">
+<link rel="next" href="GdlDockNotebook.html" title="GdlDockNotebook">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="widget.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="widget.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GNOME Docking Library Reference Manual</th>
+<td><a accesskey="n" href="GdlDockNotebook.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GdlDock.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GdlDock.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GdlDock.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GdlDock.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#GdlDock.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#GdlDock.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GdlDock"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GdlDock.top_of_page"></a>GdlDock</span></h2>
+<p>GdlDock — A docking area widget.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GdlDock.stability-level"></a><h2>Stability Level</h2>
+Unstable, unless otherwise indicated
+</div>
+<div class="refsynopsisdiv">
+<a name="GdlDock.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GdlDock.html#GdlDock-struct" title="struct GdlDock">GdlDock</a>;
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="GdlDock.html#gdl-dock-new" title="gdl_dock_new ()">gdl_dock_new</a>                        (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="GdlDock.html#gdl-dock-new-from" title="gdl_dock_new_from ()">gdl_dock_new_from</a>                   (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *original</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> floating</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GdlDock.html#gdl-dock-add-item" title="gdl_dock_add_item ()">gdl_dock_add_item</a>                   (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a> *item</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GdlDockObject.html#GdlDockPlacement" title="enum GdlDockPlacement"><span class="type">GdlDockPlacement</span></a> placement</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GdlDock.html#gdl-dock-add-floating-item" title="gdl_dock_add_floating_item ()">gdl_dock_add_floating_item</a>          (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a> *item</code></em>,
+                                                         <em class="parameter"><code><span class="type">gint</span> x</code></em>,
+                                                         <em class="parameter"><code><span class="type">gint</span> y</code></em>,
+                                                         <em class="parameter"><code><span class="type">gint</span> width</code></em>,
+                                                         <em class="parameter"><code><span class="type">gint</span> height</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GdlDock.html#gdl-dock-hide-preview" title="gdl_dock_hide_preview ()">gdl_dock_hide_preview</a>               (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GdlDock.html#gdl-dock-show-preview" title="gdl_dock_show_preview ()">gdl_dock_show_preview</a>               (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>,
+                                                         <em class="parameter"><code><span class="type">GdkRectangle</span> *rect</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GdlDock.html#gdl-dock-set-skip-taskbar" title="gdl_dock_set_skip_taskbar ()">gdl_dock_set_skip_taskbar</a>           (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> skip</code></em>);
+<a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="returnvalue">GdlDockItem</span></a> *       <a class="link" href="GdlDock.html#gdl-dock-get-item-by-name" title="gdl_dock_get_item_by_name ()">gdl_dock_get_item_by_name</a>           (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *name</code></em>);
+<span class="returnvalue">GList</span> *             <a class="link" href="GdlDock.html#gdl-dock-get-named-items" title="gdl_dock_get_named_items ()">gdl_dock_get_named_items</a>            (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>);
+<a class="link" href="GdlDockPlaceholder.html" title="GdlDockPlaceHolder"><span class="returnvalue">GdlDockPlaceholder</span></a> * <a class="link" href="GdlDock.html#gdl-dock-get-placeholder-by-name" title="gdl_dock_get_placeholder_by_name ()">gdl_dock_get_placeholder_by_name</a>   (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *name</code></em>);
+<a class="link" href="GdlDock.html" title="GdlDock"><span class="returnvalue">GdlDock</span></a> *           <a class="link" href="GdlDock.html#gdl-dock-object-get-toplevel" title="gdl_dock_object_get_toplevel ()">gdl_dock_object_get_toplevel</a>        (<em class="parameter"><code><a class="link" href="GdlDockObject.html" title="GdlDockObject"><span class="type">GdlDockObject</span></a> *object</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GdlDock.html#gdl-dock-xor-rect" title="gdl_dock_xor_rect ()">gdl_dock_xor_rect</a>                   (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>,
+                                                         <em class="parameter"><code><span class="type">GdkRectangle</span> *rect</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GdlDock.html#gdl-dock-xor-rect-hide" title="gdl_dock_xor_rect_hide ()">gdl_dock_xor_rect_hide</a>              (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDock.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----GtkWidget
+               +----GtkContainer
+                     +----<a class="link" href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a>
+                           +----GdlDock
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDock.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GdlDock implements
+ AtkImplementorIface and  GtkBuildable.</p>
+</div>
+<div class="refsect1">
+<a name="GdlDock.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GdlDock.html#GdlDock--default-title" title='The "default-title" property'>default-title</a>"            <span class="type">gchar</span>*                : Read / Write
+  "<a class="link" href="GdlDock.html#GdlDock--floating" title='The "floating" property'>floating</a>"                 <span class="type">gboolean</span>              : Read / Write / Construct Only
+  "<a class="link" href="GdlDock.html#GdlDock--floatx" title='The "floatx" property'>floatx</a>"                   <span class="type">gint</span>                  : Read / Write / Construct
+  "<a class="link" href="GdlDock.html#GdlDock--floaty" title='The "floaty" property'>floaty</a>"                   <span class="type">gint</span>                  : Read / Write / Construct
+  "<a class="link" href="GdlDock.html#GdlDock--height" title='The "height" property'>height</a>"                   <span class="type">gint</span>                  : Read / Write / Construct
+  "<a class="link" href="GdlDock.html#GdlDock--skip-taskbar" title='The "skip-taskbar" property'>skip-taskbar</a>"             <span class="type">gboolean</span>              : Read / Write / Construct
+  "<a class="link" href="GdlDock.html#GdlDock--width" title='The "width" property'>width</a>"                    <span class="type">gint</span>                  : Read / Write / Construct
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDock.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="GdlDock.html#GdlDock-layout-changed" title='The "layout-changed" signal'>layout-changed</a>"                                 : <code class="literal">Run Last</code>
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDock.description"></a><h2>Description</h2>
+<p>
+A <a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> is the toplevel widget which in turn hold a tree of <a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a>
+widgets.
+</p>
+<p>
+Several dock widgets can exchange widgets if they share the same master.
+</p>
+</div>
+<div class="refsect1">
+<a name="GdlDock.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GdlDock-struct"></a><h3>struct GdlDock</h3>
+<pre class="programlisting">struct GdlDock;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-new"></a><h3>gdl_dock_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         gdl_dock_new                        (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Create a new dock.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> widget. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-new-from"></a><h3>gdl_dock_new_from ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         gdl_dock_new_from                   (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *original</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> floating</code></em>);</pre>
+<p>
+Create a new dock widget having the same master than <em class="parameter"><code>original</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>original</code></em> :</span></p></td>
+<td>The original <a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>floating</code></em> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> to create a floating dock</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> widget. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-add-item"></a><h3>gdl_dock_add_item ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gdl_dock_add_item                   (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a> *item</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GdlDockObject.html#GdlDockPlacement" title="enum GdlDockPlacement"><span class="type">GdlDockPlacement</span></a> placement</code></em>);</pre>
+<p>
+Dock in <em class="parameter"><code>dock</code></em>, the widget <em class="parameter"><code>item</code></em> at the position defined by <em class="parameter"><code>placement</code></em>. The
+function takes care of finding the right parent widget eventually creating
+it if needed.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dock</code></em> :</span></p></td>
+<td>A <a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> widget</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>item</code></em> :</span></p></td>
+<td>A <a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a> widget</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>placement</code></em> :</span></p></td>
+<td>A position for the widget</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-add-floating-item"></a><h3>gdl_dock_add_floating_item ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gdl_dock_add_floating_item          (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a> *item</code></em>,
+                                                         <em class="parameter"><code><span class="type">gint</span> x</code></em>,
+                                                         <em class="parameter"><code><span class="type">gint</span> y</code></em>,
+                                                         <em class="parameter"><code><span class="type">gint</span> width</code></em>,
+                                                         <em class="parameter"><code><span class="type">gint</span> height</code></em>);</pre>
+<p>
+Dock an item as a floating item. It creates a new window containing a new
+dock widget sharing the same master where the item is docked.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dock</code></em> :</span></p></td>
+<td>A <a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> widget</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>item</code></em> :</span></p></td>
+<td>A <a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a> widget</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>X coordinate of the floating item</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>Y coordinate of the floating item</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>width of the floating item</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td>height of the floating item</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-hide-preview"></a><h3>gdl_dock_hide_preview ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gdl_dock_hide_preview               (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>);</pre>
+<p>
+Hide the preview window used to materialize the dock target.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>dock</code></em> :</span></p></td>
+<td>A <a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> widget</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-show-preview"></a><h3>gdl_dock_show_preview ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gdl_dock_show_preview               (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>,
+                                                         <em class="parameter"><code><span class="type">GdkRectangle</span> *rect</code></em>);</pre>
+<p>
+Show a preview window used to materialize the dock target.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dock</code></em> :</span></p></td>
+<td>A <a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> widget</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>rect</code></em> :</span></p></td>
+<td>The position and the size of the preview window</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-set-skip-taskbar"></a><h3>gdl_dock_set_skip_taskbar ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gdl_dock_set_skip_taskbar           (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> skip</code></em>);</pre>
+<p>
+Sets whether or not a floating dock window should be prevented from
+appearing in the system taskbar.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dock</code></em> :</span></p></td>
+<td>The dock whose property should be set.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>skip</code></em> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> if floating docks should be prevented from appearing in the taskbar</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 3.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-get-item-by-name"></a><h3>gdl_dock_get_item_by_name ()</h3>
+<pre class="programlisting"><a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="returnvalue">GdlDockItem</span></a> *       gdl_dock_get_item_by_name           (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *name</code></em>);</pre>
+<p>
+Looks for an <a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a> widget bound to the master of the dock item. It
+does not search only in the children of this particular dock widget.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dock</code></em> :</span></p></td>
+<td>A <a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> widget</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>An item name</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a> widget or <code class="literal">NULL</code>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-get-named-items"></a><h3>gdl_dock_get_named_items ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *             gdl_dock_get_named_items            (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>);</pre>
+<p>
+Returns a list of all item bound to the master of the dock, not only
+the children of this particular dock widget.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dock</code></em> :</span></p></td>
+<td>A <a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> widget</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A list of <a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a>. The list should be freedwith <code class="function">g_list_free()</code>,
+but the item still belong to the master. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GdlDockObject][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-get-placeholder-by-name"></a><h3>gdl_dock_get_placeholder_by_name ()</h3>
+<pre class="programlisting"><a class="link" href="GdlDockPlaceholder.html" title="GdlDockPlaceHolder"><span class="returnvalue">GdlDockPlaceholder</span></a> * gdl_dock_get_placeholder_by_name   (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *name</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">gdl_dock_get_placeholder_by_name</code> has been deprecated since version 3.6 and should not be used in newly-written code. This function is always returning <code class="literal">NULL</code>.</p>
+</div>
+<p>
+Looks for an <a class="link" href="GdlDockPlaceholder.html" title="GdlDockPlaceHolder"><span class="type">GdlDockPlaceholder</span></a> object bound to the master of the dock item.
+It does not search only in the children of this particular dock widget.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dock</code></em> :</span></p></td>
+<td>A <a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> widget</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>An item name</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="GdlDockPlaceholder.html" title="GdlDockPlaceHolder"><span class="type">GdlDockPlaceholder</span></a> object or <code class="literal">NULL</code>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-object-get-toplevel"></a><h3>gdl_dock_object_get_toplevel ()</h3>
+<pre class="programlisting"><a class="link" href="GdlDock.html" title="GdlDock"><span class="returnvalue">GdlDock</span></a> *           gdl_dock_object_get_toplevel        (<em class="parameter"><code><a class="link" href="GdlDockObject.html" title="GdlDockObject"><span class="type">GdlDockObject</span></a> *object</code></em>);</pre>
+<p>
+Get the top level <a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> widget of <em class="parameter"><code>object</code></em> or <code class="literal">NULL</code> if cannot be found.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>object</code></em> :</span></p></td>
+<td>A <a class="link" href="GdlDockObject.html" title="GdlDockObject"><span class="type">GdlDockObject</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> or <code class="literal">NULL</code>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-xor-rect"></a><h3>gdl_dock_xor_rect ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gdl_dock_xor_rect                   (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>,
+                                                         <em class="parameter"><code><span class="type">GdkRectangle</span> *rect</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">gdl_dock_xor_rect</code> has been deprecated since version 3.6 and should not be used in newly-written code. Use gdl_dock_show_preview instead.</p>
+</div>
+<p>
+Show a preview window used to materialize the dock target.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dock</code></em> :</span></p></td>
+<td>A <a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> widget</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>rect</code></em> :</span></p></td>
+<td>The position and the size of the preview window</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-xor-rect-hide"></a><h3>gdl_dock_xor_rect_hide ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gdl_dock_xor_rect_hide              (<em class="parameter"><code><a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *dock</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">gdl_dock_xor_rect_hide</code> has been deprecated since version 3.6 and should not be used in newly-written code. Use gdl_dock_hide_preview instead.</p>
+</div>
+<p>
+Hide the preview window used to materialize the dock target.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>dock</code></em> :</span></p></td>
+<td>A <a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> widget</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GdlDock.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GdlDock--default-title"></a><h3>The <code class="literal">"default-title"</code> property</h3>
+<pre class="programlisting">  "default-title"            <span class="type">gchar</span>*                : Read / Write</pre>
+<p>Default title for the newly created floating docks.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GdlDock--floating"></a><h3>The <code class="literal">"floating"</code> property</h3>
+<pre class="programlisting">  "floating"                 <span class="type">gboolean</span>              : Read / Write / Construct Only</pre>
+<p>Whether the dock is floating in its own window.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GdlDock--floatx"></a><h3>The <code class="literal">"floatx"</code> property</h3>
+<pre class="programlisting">  "floatx"                   <span class="type">gint</span>                  : Read / Write / Construct</pre>
+<p>X coordinate for a floating dock.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GdlDock--floaty"></a><h3>The <code class="literal">"floaty"</code> property</h3>
+<pre class="programlisting">  "floaty"                   <span class="type">gint</span>                  : Read / Write / Construct</pre>
+<p>Y coordinate for a floating dock.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GdlDock--height"></a><h3>The <code class="literal">"height"</code> property</h3>
+<pre class="programlisting">  "height"                   <span class="type">gint</span>                  : Read / Write / Construct</pre>
+<p>Height for the dock when it's of floating type.</p>
+<p>Allowed values: &gt;= G_MAXULONG</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GdlDock--skip-taskbar"></a><h3>The <code class="literal">"skip-taskbar"</code> property</h3>
+<pre class="programlisting">  "skip-taskbar"             <span class="type">gboolean</span>              : Read / Write / Construct</pre>
+<p>
+Whether or not to prevent a floating dock window from appearing in the
+taskbar. Note that this only affects floating windows that are created
+after this flag is set; existing windows are not affected.  Usually,
+this property is used when you create the dock.
+</p>
+<p>Default value: TRUE</p>
+<p class="since">Since 3.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GdlDock--width"></a><h3>The <code class="literal">"width"</code> property</h3>
+<pre class="programlisting">  "width"                    <span class="type">gint</span>                  : Read / Write / Construct</pre>
+<p>Width for the dock when it's of floating type.</p>
+<p>Allowed values: &gt;= G_MAXULONG</p>
+<p>Default value: -1</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GdlDock.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GdlDock-layout-changed"></a><h3>The <code class="literal">"layout-changed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="GdlDock.html" title="GdlDock"><span class="type">GdlDock</span></a> *arg0,
+                                                        <span class="type">gpointer</span> user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+Signals that the layout has changed, one or more widgets have been moved,
+added or removed.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GdlDock.see-also"></a><h2>See Also</h2>
+<a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a>, <a class="link" href="GdlDockMaster.html" title="GdlDockMaster"><span class="type">GdlDockMaster</span></a>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

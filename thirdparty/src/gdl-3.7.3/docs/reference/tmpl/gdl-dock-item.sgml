@@ -1,0 +1,453 @@
+<!-- ##### SECTION Title ##### -->
+GdlDockItem
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### MACRO GDL_DOCK_ITEM_CANT_CLOSE ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### MACRO GDL_DOCK_ITEM_CANT_ICONIFY ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### MACRO GDL_DOCK_ITEM_FLAGS ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### MACRO GDL_DOCK_ITEM_HAS_GRIP ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### MACRO GDL_DOCK_ITEM_ICONIFIED ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### MACRO GDL_DOCK_ITEM_IN_DRAG ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### MACRO GDL_DOCK_ITEM_IN_PREDRAG ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### MACRO GDL_DOCK_ITEM_NOT_LOCKED ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### MACRO GDL_DOCK_ITEM_NO_GRIP ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### MACRO GDL_DOCK_ITEM_SET_FLAGS ##### -->
+<para>
+
+</para>
+
+@item: 
+@flag: 
+
+
+<!-- ##### MACRO GDL_DOCK_ITEM_UNSET_FLAGS ##### -->
+<para>
+
+</para>
+
+@item: 
+@flag: 
+
+
+<!-- ##### MACRO GDL_DOCK_ITEM_USER_ACTION ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### STRUCT GdlDockItem ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL GdlDockItem::deselected ##### -->
+<para>
+
+</para>
+
+@gdldockitem: the object which received the signal.
+
+<!-- ##### SIGNAL GdlDockItem::dock-drag-begin ##### -->
+<para>
+
+</para>
+
+@gdldockitem: the object which received the signal.
+
+<!-- ##### SIGNAL GdlDockItem::dock-drag-end ##### -->
+<para>
+
+</para>
+
+@gdldockitem: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL GdlDockItem::dock-drag-motion ##### -->
+<para>
+
+</para>
+
+@gdldockitem: the object which received the signal.
+@arg1: 
+@arg2: 
+@arg3: 
+
+<!-- ##### SIGNAL GdlDockItem::move-focus-child ##### -->
+<para>
+
+</para>
+
+@gdldockitem: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL GdlDockItem::selected ##### -->
+<para>
+
+</para>
+
+@gdldockitem: the object which received the signal.
+
+<!-- ##### ARG GdlDockItem:behavior ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockItem:closed ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockItem:iconified ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockItem:locked ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockItem:orientation ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockItem:preferred-height ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockItem:preferred-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockItem:resize ##### -->
+<para>
+
+</para>
+
+<!-- ##### ENUM GdlDockItemBehavior ##### -->
+<para>
+
+</para>
+
+@GDL_DOCK_ITEM_BEH_NORMAL: 
+@GDL_DOCK_ITEM_BEH_NEVER_FLOATING: 
+@GDL_DOCK_ITEM_BEH_NEVER_VERTICAL: 
+@GDL_DOCK_ITEM_BEH_NEVER_HORIZONTAL: 
+@GDL_DOCK_ITEM_BEH_LOCKED: 
+@GDL_DOCK_ITEM_BEH_CANT_DOCK_TOP: 
+@GDL_DOCK_ITEM_BEH_CANT_DOCK_BOTTOM: 
+@GDL_DOCK_ITEM_BEH_CANT_DOCK_LEFT: 
+@GDL_DOCK_ITEM_BEH_CANT_DOCK_RIGHT: 
+@GDL_DOCK_ITEM_BEH_CANT_DOCK_CENTER: 
+@GDL_DOCK_ITEM_BEH_CANT_CLOSE: 
+@GDL_DOCK_ITEM_BEH_CANT_ICONIFY: 
+@GDL_DOCK_ITEM_BEH_NO_GRIP: 
+
+<!-- ##### STRUCT GdlDockItemClass ##### -->
+<para>
+
+</para>
+
+@parent_class: 
+@priv: 
+@set_orientation: 
+@dock_drag_begin: 
+@dock_drag_motion: 
+@dock_drag_end: 
+@move_focus_child: 
+
+<!-- ##### ENUM GdlDockItemFlags ##### -->
+<para>
+
+</para>
+
+@GDL_DOCK_IN_DRAG: 
+@GDL_DOCK_IN_PREDRAG: 
+@GDL_DOCK_ICONIFIED: 
+@GDL_DOCK_USER_ACTION: 
+
+<!-- ##### FUNCTION gdl_dock_item_new ##### -->
+<para>
+
+</para>
+
+@name: 
+@long_name: 
+@behavior: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_new_with_pixbuf_icon ##### -->
+<para>
+
+</para>
+
+@name: 
+@long_name: 
+@pixbuf_icon: 
+@behavior: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_new_with_stock ##### -->
+<para>
+
+</para>
+
+@name: 
+@long_name: 
+@stock_id: 
+@behavior: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_bind ##### -->
+<para>
+
+</para>
+
+@item: 
+@dock: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_unbind ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_show_grip ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_hide_grip ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_show_item ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_hide_item ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_iconify_item ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_dock_to ##### -->
+<para>
+
+</para>
+
+@item: 
+@target: 
+@position: 
+@docking_param: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_lock ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_unlock ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_notify_deselected ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_notify_selected ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_get_grip ##### -->
+<para>
+
+</para>
+
+@item: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_get_tablabel ##### -->
+<para>
+
+</para>
+
+@item: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_or_child_has_focus ##### -->
+<para>
+
+</para>
+
+@item: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_preferred_size ##### -->
+<para>
+
+</para>
+
+@item: 
+@req: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_set_default_position ##### -->
+<para>
+
+</para>
+
+@item: 
+@reference: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_set_orientation ##### -->
+<para>
+
+</para>
+
+@item: 
+@orientation: 
+
+
+<!-- ##### FUNCTION gdl_dock_item_set_tablabel ##### -->
+<para>
+
+</para>
+
+@item: 
+@tablabel: 
+
+

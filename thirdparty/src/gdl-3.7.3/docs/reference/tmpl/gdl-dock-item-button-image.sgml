@@ -1,0 +1,45 @@
+<!-- ##### SECTION Title ##### -->
+GdlDockItemButtonImage
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GdlDockItemButtonImage ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ENUM GdlDockItemButtonImageType ##### -->
+<para>
+
+</para>
+
+@GDL_DOCK_ITEM_BUTTON_IMAGE_CLOSE: 
+@GDL_DOCK_ITEM_BUTTON_IMAGE_ICONIFY: 
+
+<!-- ##### FUNCTION gdl_dock_item_button_image_new ##### -->
+<para>
+
+</para>
+
+@image_type: 
+@Returns: 
+
+

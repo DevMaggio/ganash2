@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui>
+    <menubar name='MenuBar'>
+	<menu action='FileMenu'>
+	    <menu action='FileNew'>
+		<menuitem action='FileNewStandard'/>
+		<menuitem action='FileNewFoo'/>
+		<menuitem action='FileNewGoo'/>
+	    </menu>
+	    <separator/>
+	    <menuitem action='FileQuit'/>
+	</menu>
+	<menu action='EditMenu'>
+	    <menuitem action='EditCopy'/>
+	    <menuitem action='EditPaste'/>
+	    <menuitem action='EditSomething'/>
+	</menu>
+	<menu action='ChoicesMenu'>
+	    <menuitem action='ChoiceOne'/>
+	    <menuitem action='ChoiceTwo'/>
+	</menu>
+	<menu action='HelpMenu'>
+	    <menuitem action='HelpAbout'/>
+	</menu>
+    </menubar>
+
+    <toolbar  name='ToolBar'>
+	<toolitem action='FileNewStandard'/>
+	<toolitem action='FileQuit'/>
+    </toolbar>
+
+    <!-- composition -->
+
+    <!-- custom tag layouting -->
+    <dockbar  name='DockTools'>
+	<dockitem name="drawTool" />
+	<dockitem name="drawPalette" />
+    </dockbar>
+
+    <dockbar  name='DockProperties' position="right" />
+    <dockbar  name='DockScene' position="[top|center|bottom] [left|center|right]" />
+    <dockbar  name='DockTimeline' position="0 1 0 3" />
+    <!-- custom tag -->
+</ui>
+
+
+UiBuilder <- glade contruit l'IHM avec les propriété adequat
+UiManager <- xml compose l'IHM
+
+UiMenuManager
+UiToolManager
+UiDockManager
+
+UiAdapter <- xml
+UiPerspective
+
+Window → Workbench → Illustration/Animation/Diagramme
+
+<window>
+    <menu/>
+    <tool/>
+    <dock/>
+    <main/>
+    <status/>
+</window>
+
+
+
+	<interface>
+	  <object class="GtkMenuBar" id="menubar2">
+	    <property name="visible">True</property>
+	    <property name="can_focus">False</property>
+	    <child>
+	      <object class="GtkMenuItem" id="menuitem5">
+		<property name="use_action_appearance">False</property>
+		<property name="visible">True</property>
+		<property name="can_focus">False</property>
+		<property name="label" translatable="yes">_Fichier</property>
+		<property name="use_underline">True</property>
+		<child type="submenu">
+
+
+
+
+
+
+
+

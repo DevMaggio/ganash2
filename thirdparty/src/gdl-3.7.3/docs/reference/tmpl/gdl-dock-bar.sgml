@@ -1,0 +1,93 @@
+<!-- ##### SECTION Title ##### -->
+GdlDockBar
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GdlDockBar ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GdlDockBar:dockbar-style ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockBar:master ##### -->
+<para>
+
+</para>
+
+<!-- ##### ENUM GdlDockBarStyle ##### -->
+<para>
+
+</para>
+
+@GDL_DOCK_BAR_ICONS: 
+@GDL_DOCK_BAR_TEXT: 
+@GDL_DOCK_BAR_BOTH: 
+@GDL_DOCK_BAR_AUTO: 
+
+<!-- ##### FUNCTION gdl_dock_bar_new ##### -->
+<para>
+
+</para>
+
+@master: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_bar_set_orientation ##### -->
+<para>
+
+</para>
+
+@dockbar: 
+@orientation: 
+
+
+<!-- ##### FUNCTION gdl_dock_bar_get_orientation ##### -->
+<para>
+
+</para>
+
+@dockbar: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_bar_set_style ##### -->
+<para>
+
+</para>
+
+@dockbar: 
+@style: 
+
+
+<!-- ##### FUNCTION gdl_dock_bar_get_style ##### -->
+<para>
+
+</para>
+
+@dockbar: 
+@Returns: 
+
+

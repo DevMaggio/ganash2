@@ -1,0 +1,66 @@
+<!-- ##### SECTION Title ##### -->
+GdlDockTablabel
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GdlDockTablabel ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL GdlDockTablabel::button-pressed-handle ##### -->
+<para>
+
+</para>
+
+@gdldocktablabel: the object which received the signal.
+@arg1: 
+
+<!-- ##### ARG GdlDockTablabel:item ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gdl_dock_tablabel_new ##### -->
+<para>
+
+</para>
+
+@item: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_tablabel_activate ##### -->
+<para>
+
+</para>
+
+@tablabel: 
+
+
+<!-- ##### FUNCTION gdl_dock_tablabel_deactivate ##### -->
+<para>
+
+</para>
+
+@tablabel: 
+
+

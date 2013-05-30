@@ -1,0 +1,40 @@
+<ui>
+    <menubar name='MenuBar'>
+	<menu action='FileMenu'>
+	    <menu action='FileNew'>
+		<menuitem action='FileNewStandard'/>
+		<menuitem action='FileNewFoo'/>
+		<menuitem action='FileNewGoo'/>
+	    </menu>
+	    <separator/>
+	    <menuitem action='FileQuit'/>
+	</menu>
+	<menu action='EditMenu'>
+	    <menuitem action='EditCopy'/>
+	    <menuitem action='EditPaste'/>
+	    <menuitem action='EditSomething'/>
+	</menu>
+	<menu action='ChoicesMenu'>
+	    <menuitem action='ChoiceOne'/>
+	    <menuitem action='ChoiceTwo'/>
+	</menu>
+	<menu action='HelpMenu'>
+	    <menuitem action='HelpAbout'/>
+	</menu>
+    </menubar>
+
+    <toolbar  name='MenuTool'>
+	<toolitem action='FileNewStandard'/>
+	<toolitem action='FileQuit'/>
+    </toolbar>
+
+    <toolbar  name='Tools'>
+	<toolitem action='FileNewStandard'/>
+	<toolitem action='FileQuit'/>
+    </toolbar>
+
+    <toolbar  name='Options'>
+	<toolitem action='FileNewStandard'/>
+	<toolitem action='FileQuit'/>
+    </toolbar>
+</ui>

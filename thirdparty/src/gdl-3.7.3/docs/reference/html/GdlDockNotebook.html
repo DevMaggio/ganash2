@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GdlDockNotebook</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="GNOME Docking Library Reference Manual">
+<link rel="up" href="widget.html" title="Widgets">
+<link rel="prev" href="GdlDock.html" title="GdlDock">
+<link rel="next" href="GdlDockPaned.html" title="GdlDockPaned">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GdlDock.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="widget.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GNOME Docking Library Reference Manual</th>
+<td><a accesskey="n" href="GdlDockPaned.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GdlDockNotebook.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GdlDockNotebook.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GdlDockNotebook.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GdlDockNotebook.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#GdlDockNotebook.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GdlDockNotebook"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GdlDockNotebook.top_of_page"></a>GdlDockNotebook</span></h2>
+<p>GdlDockNotebook — Arrange dock widgets in a tabbed notebook</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GdlDockNotebook.stability-level"></a><h2>Stability Level</h2>
+Unstable, unless otherwise indicated
+</div>
+<div class="refsynopsisdiv">
+<a name="GdlDockNotebook.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GdlDockNotebook.html#GdlDockNotebook-struct" title="struct GdlDockNotebook">GdlDockNotebook</a>;
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="GdlDockNotebook.html#gdl-dock-notebook-new" title="gdl_dock_notebook_new ()">gdl_dock_notebook_new</a>               (<em class="parameter"><code><span class="type">void</span></code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDockNotebook.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----GtkWidget
+               +----GtkContainer
+                     +----<a class="link" href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a>
+                           +----<a class="link" href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a>
+                                 +----GdlDockNotebook
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDockNotebook.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GdlDockNotebook implements
+ AtkImplementorIface and  GtkBuildable.</p>
+</div>
+<div class="refsect1">
+<a name="GdlDockNotebook.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GdlDockNotebook.html#GdlDockNotebook--page" title='The "page" property'>page</a>"                     <span class="type">gint</span>                  : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="GdlDockNotebook.description"></a><h2>Description</h2>
+<p>
+A <a class="link" href="GdlDockNotebook.html" title="GdlDockNotebook"><span class="type">GdlDockNotebook</span></a> is a compound dock widget. It can dock
+an unlimited number of widget displaying them in a notebook. This dock
+widget is normally created automatically when a child is docked in
+the center of another one.
+A <a class="link" href="GdlDockNotebook.html" title="GdlDockNotebook"><span class="type">GdlDockNotebook</span></a> cannot contain other compound widgets, like a <a class="link" href="GdlDockPaned.html" title="GdlDockPaned"><span class="type">GdlDockPaned</span></a>.
+</p>
+<p>
+A <a class="link" href="GdlDockNotebook.html" title="GdlDockNotebook"><span class="type">GdlDockNotebook</span></a> derives from <a class="link" href="GdlDockItem.html" title="GdlDockItem"><span class="type">GdlDockItem</span></a> and contains a <a class="link" href="GdlSwitcher.html" title="GdlSwitcher"><span class="type">GdlSwitcher</span></a>
+used to display all children.
+</p>
+</div>
+<div class="refsect1">
+<a name="GdlDockNotebook.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GdlDockNotebook-struct"></a><h3>struct GdlDockNotebook</h3>
+<pre class="programlisting">struct GdlDockNotebook;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdl-dock-notebook-new"></a><h3>gdl_dock_notebook_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         gdl_dock_notebook_new               (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Creates a new manual <a class="link" href="GdlDockNotebook.html" title="GdlDockNotebook"><span class="type">GdlDockNotebook</span></a> widget. This function is seldom useful as
+such widget is normally created and destroyed automatically when needed by
+the master.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The newly created <a class="link" href="GdlDockNotebook.html" title="GdlDockNotebook"><span class="type">GdlDockNotebook</span></a>.</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GdlDockNotebook.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GdlDockNotebook--page"></a><h3>The <code class="literal">"page"</code> property</h3>
+<pre class="programlisting">  "page"                     <span class="type">gint</span>                  : Read / Write</pre>
+<p>The index of the current page.</p>
+<p>Allowed values: &gt;= G_MAXULONG</p>
+<p>Default value: -1</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GdlDockNotebook.see-also"></a><h2>See Also</h2>
+<a class="link" href="GdlDockPaned.html" title="GdlDockPaned"><span class="type">GdlDockPaned</span></a>, <a class="link" href="GdlDockMaster.html" title="GdlDockMaster"><span class="type">GdlDockMaster</span></a>, <a class="link" href="GdlSwitcher.html" title="GdlSwitcher"><span class="type">GdlSwitcher</span></a>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

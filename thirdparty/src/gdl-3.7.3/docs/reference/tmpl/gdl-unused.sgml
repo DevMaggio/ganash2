@@ -1,0 +1,360 @@
+<!-- ##### SECTION ./tmpl/gdl-config.sgml:Image ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/gdl-config.sgml:Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION ./tmpl/gdl-config.sgml:See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION ./tmpl/gdl-config.sgml:Short_Description ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/gdl-config.sgml:Stability_Level ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/gdl-config.sgml:Title ##### -->
+gdl-config
+
+
+<!-- ##### SECTION ./tmpl/gdl-deprecated.sgml:Image ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/gdl-deprecated.sgml:Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION ./tmpl/gdl-deprecated.sgml:See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION ./tmpl/gdl-deprecated.sgml:Short_Description ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/gdl-deprecated.sgml:Stability_Level ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/gdl-deprecated.sgml:Title ##### -->
+gdl-deprecated
+
+
+<!-- ##### SECTION ./tmpl/gdlseal.sgml:Image ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/gdlseal.sgml:Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION ./tmpl/gdlseal.sgml:See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION ./tmpl/gdlseal.sgml:Short_Description ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/gdlseal.sgml:Stability_Level ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/gdlseal.sgml:Title ##### -->
+gdlseal
+
+
+<!-- ##### MACRO GDK_HAVE_WCHAR_H ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO GDK_HAVE_WCTYPE_H ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO GDK_WINDOWING_X11 ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO GDL_DOCK_MASTER_PROPERTY ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO GDL_DOCK_NAME_PROPERTY ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO GSEAL ##### -->
+<para>
+
+</para>
+
+@ident: 
+
+<!-- ##### STRUCT GdlDockBarClass ##### -->
+<para>
+
+</para>
+
+@parent_class: 
+
+<!-- ##### STRUCT GdlDockClass ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT GdlDockItemButtonImageClass ##### -->
+<para>
+
+</para>
+
+@parent_class: 
+
+<!-- ##### STRUCT GdlDockItemClassPrivate ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT GdlDockItemGripClass ##### -->
+<para>
+
+</para>
+
+@parent_class: 
+
+<!-- ##### STRUCT GdlDockLayoutClass ##### -->
+<para>
+
+</para>
+
+@g_object_class: 
+
+<!-- ##### STRUCT GdlDockMasterClass ##### -->
+<para>
+
+</para>
+
+@parent_class: 
+@layout_changed: 
+
+<!-- ##### STRUCT GdlDockNotebookClass ##### -->
+<para>
+
+</para>
+
+@parent_class: 
+@priv: 
+
+<!-- ##### STRUCT GdlDockNotebookClassPrivate ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT GdlDockPanedClass ##### -->
+<para>
+
+</para>
+
+@parent_class: 
+
+<!-- ##### STRUCT GdlDockPlaceholderClass ##### -->
+<para>
+
+</para>
+
+@parent_class: 
+
+<!-- ##### STRUCT GdlDockTablabelClass ##### -->
+<para>
+
+</para>
+
+@parent_class: 
+@button_pressed_handle: 
+
+<!-- ##### STRUCT GdlPreviewWindowClass ##### -->
+<para>
+
+</para>
+
+@parent_class: 
+
+<!-- ##### STRUCT GdlSwitcherClass ##### -->
+<para>
+
+</para>
+
+@parent_class: 
+@priv: 
+
+<!-- ##### STRUCT GdlSwitcherClassPrivate ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION gdl_dock_item_is_closed ##### -->
+<para>
+
+</para>
+
+@item: 
+@Returns: 
+
+<!-- ##### FUNCTION gdl_dock_item_is_placeholder ##### -->
+<para>
+
+</para>
+
+@item: 
+@Returns: 
+
+<!-- ##### FUNCTION gdl_dock_object_get_controller ##### -->
+<para>
+
+</para>
+
+@object: 
+@Returns: 
+
+<!-- ##### FUNCTION gdl_dock_object_get_long_name ##### -->
+<para>
+
+</para>
+
+@object: 
+@Returns: 
+
+<!-- ##### FUNCTION gdl_dock_object_get_master ##### -->
+<para>
+
+</para>
+
+@object: 
+@Returns: 
+
+<!-- ##### FUNCTION gdl_dock_object_get_name ##### -->
+<para>
+
+</para>
+
+@object: 
+@Returns: 
+
+<!-- ##### FUNCTION gdl_dock_object_get_pixbuf ##### -->
+<para>
+
+</para>
+
+@object: 
+@Returns: 
+
+<!-- ##### FUNCTION gdl_dock_object_get_stock_id ##### -->
+<para>
+
+</para>
+
+@object: 
+@Returns: 
+
+<!-- ##### FUNCTION gdl_dock_object_is_automatic ##### -->
+<para>
+
+</para>
+
+@object: 
+@Returns: 
+
+<!-- ##### FUNCTION gdl_dock_object_is_closed ##### -->
+<para>
+
+</para>
+
+@object: 
+@Returns: 
+
+<!-- ##### FUNCTION gdl_dock_object_is_frozen ##### -->
+<para>
+
+</para>
+
+@object: 
+@Returns: 
+
+<!-- ##### FUNCTION gdl_dock_object_layout_changed_notify ##### -->
+<para>
+
+</para>
+
+@object: 
+
+<!-- ##### FUNCTION gdl_dock_object_set_long_name ##### -->
+<para>
+
+</para>
+
+@object: 
+@name: 
+
+<!-- ##### FUNCTION gdl_dock_object_set_manual ##### -->
+<para>
+
+</para>
+
+@object: 
+
+<!-- ##### FUNCTION gdl_dock_object_set_name ##### -->
+<para>
+
+</para>
+
+@object: 
+@name: 
+
+<!-- ##### FUNCTION gdl_dock_object_set_pixbuf ##### -->
+<para>
+
+</para>
+
+@object: 
+@icon: 
+
+<!-- ##### FUNCTION gdl_dock_object_set_stock_id ##### -->
+<para>
+
+</para>
+
+@object: 
+@stock_id: 
+

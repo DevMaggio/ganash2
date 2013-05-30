@@ -1,0 +1,70 @@
+<ui>
+	<menubar>
+		<menu mnemonic="_Fichier">
+			<menuitem mnemonic="_Nouveau..." accelerator="Ctrl+N"/>
+			<menuitem mnemonic="_Ouvrir..." accelerator="Ctrl+O"/>
+			<menu mnemonic="Ouvrir les fichiers récen_ts">
+				<menuitem mnemonic="..."/>
+				<menuitem mnemonic="Historique"/>
+			</menu>
+			<menuitem mnemonic="_Fermer" accelerator="Ctrl+W"/>
+			<menuitem mnemonic="Fermer tout" accelerator="Ctrl+Alt+W"/>
+			<separator />
+			<menuitem mnemonic="_Enregistrer" accelerator="Ctrl+S"/>
+			<menuitem mnemonic="_Enre_gistrer sous..." accelerator="Ctrl+Maj+S"/>
+			<menuitem mnemonic="Enregistrer _comme modèl..." accelerator=""/>
+			<menuitem mnemonic="Archiver..." accelerator=""/>
+			<menuitem mnemonic="Enregistrer tout" accelerator=""/>
+			<menuitem mnemonic="Rétab_lir" accelerator=""/>
+			<separator />
+			<menu mnemonic="_Importer" accelerator="">
+				<menuitem mnemonic="_Importer dans la scène..." accelerator=""/>
+				<menuitem mnemonic="Importer dans la _bibliothèque..." accelerator=""/>
+				<menuitem mnemonic="_Ouvrir une bibliothèque externe..." accelerator=""/>
+				<menuitem mnemonic="Importer de la vidéo..." accelerator=""/>
+			</menu>
+			<menu mnemonic="_Exporter" accelerator="">
+				<menuitem mnemonic="E_xporter l'image..." accelerator=""/>
+				<menuitem mnemonic="_Exporter la selection" accelerator=""/>
+				<menuitem mnemonic="_Exporter l'animation..." accelerator="Ctr+Alt+Maj+S"/>
+			</menu>
+			<separator />
+			<menuitem mnemonic="Paramèters _de publication..." accelerator="Ctr+Maj+F12"/>
+			<menuitem mnemonic="Aperçut a_vant publication" accelerator=""/>
+			<menuitem mnemonic="Pu_blier" accelerator="Alt+Maj+F12"/>
+			<separator />
+			<menuitem mnemonic="Paramètre d'AIR..." accelerator=""/>
+			<menuitem mnemonic="Paramètre de JavaScript..." accelerator=""/>
+			<separator />
+			<menuitem mnemonic="Informations..." accelerator=""/>
+			<separator />
+			<menuitem mnemonic="Mi_se en page..." accelerator=""/>
+			<menuitem mnemonic="Im_primer..." accelerator="Ctrl+P"/>
+			<separator />
+			<menuitem mnemonic="Envo_yer..." accelerator=""/>
+			<separator />
+			<menuitem mnemonic="_Quitter" accelerator="Ctrl+Q"/>
+		</menu>
+		<menu mnemonic="_Modifier">
+		</menu>
+		<menu mnemonic="_Afficher">
+		</menu>
+		<menu mnemonic="_Insertion">
+		</menu>
+		<menu mnemonic="_Modification">
+		</menu>
+		<menu mnemonic="_Text">
+		</menu>
+		<menu mnemonic="_Commandes">
+		</menu>
+		<menu mnemonic="Contrô_le">
+		</menu>
+		<menu mnemonic="_Déboguer">
+		</menu>
+		<menu mnemonic="Fenêt_re">
+		</menu>
+		<menu mnemonic="Aid_e">
+		</menu>
+	</menubar>
+</ui>
+

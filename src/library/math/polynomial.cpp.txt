@@ -1,0 +1,420 @@
+#include "polynomial.h"
+
+#include <math.h>
+
+Ganash::Math::Polynomial::Polynomial(double a0, double a1, double a2, double a3)
+{
+    if(a3!=0.0)
+    {
+        _adapter = new Ganash::Math::Polynomial::Cubic(a3, a2, a1, a0);
+    }
+    else if(a2!=0.0)
+    {
+        _adapter = new Ganash::Math::Polynomial::Quadratic(a2, a1, a0);
+    }
+    else if(a1!=0.0)
+    {
+        _adapter = new Ganash::Math::Polynomial::Affine(a1, a0);
+    }
+    else
+    {
+        _adapter = new Ganash::Math::Polynomial::Constant(a0);
+    }
+}
+
+Ganash::Math::Polynomial::Polynomial(std::vector<double> a)
+{
+    if(a.size()>4)
+    {
+        _adapter = new Ganash::Math::Polynomial::Generic(a);
+    }
+    else if(a.size()>3 && a[3]!=0.0)
+    {
+        _adapter = new Ganash::Math::Polynomial::Cubic(a3, a2, a1, a0);
+    }
+    else if(a.size()>2 && a[2]!=0.0)
+    {
+        _adapter = new Ganash::Math::Polynomial::Quadratic(a2, a1, a0);
+    }
+    else if(a.size()>1 && a[1]!=0.0)
+    {
+        _adapter = new Ganash::Math::Polynomial::Affine(a1, a0);
+    }
+    else
+    {
+        _adapter = new Ganash::Math::Polynomial::Constant(a0);
+    }
+}
+/*
+Ganash::Math::Polynomial::Factory(unsigned int degree)
+{
+    if(degree>3)
+    {
+        //_adapter = new Ganash::Math::Polynomial::Generic();
+    }
+    else if(degree>2)
+    {
+        _adapter = new Ganash::Math::Polynomial::Cubic(a3, a2, a1, a0);
+    }
+    else if(degree>1)
+    {
+        _adapter = new Ganash::Math::Polynomial::Quadratic(a2, a1, a0);
+    }
+    else if(degree>0)
+    {
+        _adapter = new Ganash::Math::Polynomial::Affine(a2, a1, a0);
+    }
+    else
+    {
+        _adapter = new Ganash::Math::Polynomial::Constant(a1, a0);
+    }
+}
+*/
+
+Ganash::Math::Polynomial::~Polynomial()
+{
+    delete _adapter;
+}
+unsigned int Ganash::Math::Polynomial::degree() const
+{
+    return _adapter->degree();
+}
+double Ganash::Math::Polynomial::getCoef(unsigned int i) const
+{
+    return _adapter->getCoef(i);
+}
+void Ganash::Math::Polynomial::setCoef(unsigned int i, double coef)
+{
+    if(i > _adapter->degree())
+    {
+        //_adapter = new
+    }
+    _adapter->setCoef(i, coef);
+    //_adapter->_a[i] = coef;
+}
+double Ganash::Math::Polynomial::f(double x)
+{
+    return _adapter->f(x);
+}
+
+Ganash::Math::Polynomial Ganash::Math::Polynomial::d()
+{
+    return _adapter->d();
+}
+
+std::vector<double> Ganash::Math::Polynomial::roots()
+{
+    return _adapter->roots();
+}
+
+void Ganash::Math::Polynomial::toStream(std::ostream &stream) const
+{
+    _adapter->toStream(stream);
+}
+
+std::ostream& operator <<(std::ostream& stream, const Ganash::Math::IPolynomial &polynomial)
+{
+    polynomial.toStream(stream);
+    return stream;
+}
+
+Ganash::Math::Polynomial& Ganash::Math::Polynomial::operator+=(const Ganash::Math::Polynomial &polynomial)
+{
+    unsigned int len = std::max(degree(), polynomial.degree());
+    for(unsigned int i=0; i<len; i++)
+    {
+        setCoef(i, getCoef(i) + polynomial.getCoef(i));
+    }
+    return *this;
+}
+
+/**
+ * @brief Ganash::Math::Polynomial::Constant::Constant
+ * @param a0
+ */
+Ganash::Math::Polynomial::Constant::Constant(double a0)
+{
+    _a[0] = a0;
+}
+unsigned int Ganash::Math::Polynomial::Constant::degree() const
+{
+    return Ganash::Math::Polynomial::Constant::DEGREE;
+}
+double Ganash::Math::Polynomial::Constant::getCoef(unsigned int i) const
+{
+    if(i>0)
+    {
+        return 0.0;
+    }
+    return _a[0];
+}
+void Ganash::Math::Polynomial::Constant::setCoef(unsigned int i, double coef)
+{
+    if(i>0)
+    {
+        return;
+    }
+    _a[i] = coef;
+}
+double Ganash::Math::Polynomial::Constant::f(double x)
+{
+    return _a[0];
+}
+Ganash::Math::Polynomial Ganash::Math::Polynomial::Constant::d()
+{
+    return Ganash::Math::Polynomial(0.0);
+}
+
+std::vector<double> Ganash::Math::Polynomial::Constant::roots()
+{
+    return std::vector<double>();
+}
+
+void Ganash::Math::Polynomial::Constant::toStream(std::ostream &stream) const
+{
+    stream << _a[0];
+}
+
+/**
+ * @brief Ganash::Math::Polynomial::Affine::Affine
+ * @param a1
+ * @param a0
+ */
+Ganash::Math::Polynomial::Affine::Affine(double a1, double a0)
+{
+    _a[0] = a0;
+    _a[1] = a1;
+}
+unsigned int Ganash::Math::Polynomial::Affine::degree() const
+{
+    return Ganash::Math::Polynomial::Affine::DEGREE;
+}
+double Ganash::Math::Polynomial::Affine::getCoef(unsigned int i) const
+{
+    if(i>1)
+    {
+        return 0.0;
+    }
+    return _a[i];
+}
+void Ganash::Math::Polynomial::Affine::setCoef(unsigned int i, double coef)
+{
+    if(i>1)
+    {
+        return;
+    }
+    _a[i] = coef;
+}
+double Ganash::Math::Polynomial::Affine::f(double x)
+{
+    return _a[1] * x + _a[0];
+}
+
+std::vector<double> Ganash::Math::Polynomial::Affine::roots()
+{
+    std::vector<double> r;
+    r.push_back(-_a[0]/_a[1]);
+    return r;
+}
+
+Ganash::Math::Polynomial Ganash::Math::Polynomial::Affine::d()
+{
+    return Ganash::Math::Polynomial(_a[1]);
+}
+
+void Ganash::Math::Polynomial::Affine::toStream(std::ostream &stream) const
+{
+    stream << _a[1] << "x + " << _a[0];
+}
+
+/*
+double Ganash::Math::Polynomial::f(double x, std::vector<double> a)
+{
+    double ret = 0;
+    for(int i=0; i<a.size(); i++)
+    {
+        ret += a[i] * pow(x, i);
+    }
+    return ret;
+}
+*/
+
+/**
+ * @brief Ganash::Math::Polynomial::Quadratic::Quadratic
+ * @param a2
+ * @param a1
+ * @param a0
+ */
+Ganash::Math::Polynomial::Quadratic::Quadratic(double a2, double a1, double a0)
+{
+    _a[0] = a0;
+    _a[1] = a1;
+    _a[2] = a2;
+}
+unsigned int Ganash::Math::Polynomial::Quadratic::degree() const
+{
+    return Ganash::Math::Polynomial::Quadratic::DEGREE;
+}
+double Ganash::Math::Polynomial::Quadratic::getCoef(unsigned int i) const
+{
+    if(i>2)
+    {
+        return 0.0;
+    }
+    return _a[i];
+}
+void Ganash::Math::Polynomial::Quadratic::setCoef(unsigned int i, double coef)
+{
+    if(i>2)
+    {
+        return;
+    }
+    _a[i] = coef;
+}
+double Ganash::Math::Polynomial::Quadratic::f(double x)
+{
+    return _a[2]*x*x + _a[1]*x + _a[0];
+}
+
+Ganash::Math::Polynomial Ganash::Math::Polynomial::Quadratic::d()
+{
+    return Ganash::Math::Polynomial(_a[1], 2*_a[2]);
+}
+
+std::vector<double> Ganash::Math::Polynomial::Quadratic::roots()
+{
+    std::vector<double> r;
+    double delta = (_a[1] * _a[1]) - (4 * _a[2] * _a[0]);
+    if(delta>0.0)
+    {
+        r.push_back((- _a[1] - pow(delta, 0.5)) / (2 * _a[2]));
+        r.push_back((- _a[1] + pow(delta, 0.5)) / (2 * _a[2]));
+    }
+    else if(delta==0.0)
+    {
+        r.push_back(- _a[1] / (2 * _a[2]));
+    }
+
+    return r;
+}
+void Ganash::Math::Polynomial::Quadratic::toStream(std::ostream &stream) const
+{
+    stream << _a[2] << "x² + " << _a[1] << "x + " << _a[0];
+    //³²¹°
+}
+
+
+/**
+ * @brief Ganash::Math::Polynomial::Cubic::Cubic
+ * @param a3
+ * @param a2
+ * @param a1
+ * @param a0
+ */
+Ganash::Math::Polynomial::Cubic::Cubic(double a3, double a2, double a1, double a0)
+{
+    _a[0] = a0;
+    _a[1] = a1;
+    _a[2] = a2;
+    _a[3] = a3;
+}
+unsigned int Ganash::Math::Polynomial::Cubic::degree() const
+{
+    return Ganash::Math::Polynomial::Cubic::DEGREE;
+}
+double Ganash::Math::Polynomial::Cubic::getCoef(unsigned int i) const
+{
+    if(i>Ganash::Math::Polynomial::Cubic::DEGREE)
+    {
+        return 0.0;
+    }
+    return _a[i];
+}
+void Ganash::Math::Polynomial::Cubic::setCoef(unsigned int i, double coef)
+{
+    if(i>Ganash::Math::Polynomial::Cubic::DEGREE)
+    {
+        return;
+    }
+    _a[i] = coef;
+}
+double Ganash::Math::Polynomial::Cubic::f(double x)
+{
+    double x2 = x*x;
+    return _a[3]*x2*x + _a[2]*x2 + _a[1]*x + _a[0];
+}
+
+Ganash::Math::Polynomial Ganash::Math::Polynomial::Cubic::d()
+{
+    return Ganash::Math::Polynomial(_a[1], 2 * _a[2], 3 * _a[3]);
+}
+
+std::vector<double> Ganash::Math::Polynomial::Cubic::roots()
+{
+    return std::vector<double>();
+}
+
+void Ganash::Math::Polynomial::Cubic::toStream(std::ostream &stream) const
+{
+    stream << _a[3] << "x³ + " << _a[2] << "x² + " << _a[1] << "x + " << _a[0];
+}
+
+/**
+ * @brief Ganash::Math::Polynomial::Generic::Generic
+ * @param a
+ */
+Ganash::Math::Polynomial::Generic::Generic(std::vector<double> a)
+{
+    //_a = a;
+    _degree = a.size();
+}
+
+unsigned int Ganash::Math::Polynomial::Generic::degree() const
+{
+    return _degree;
+}
+double Ganash::Math::Polynomial::Generic::getCoef(unsigned int i) const
+{
+    if(i>_degree)
+    {
+        return 0.0;
+    }
+    return _a[i];
+}
+void Ganash::Math::Polynomial::Generic::setCoef(unsigned int i, double coef)
+{
+    if(i>_degree)
+    {
+        return;
+    }
+    _a[i] = coef;
+}
+double Ganash::Math::Polynomial::Generic::f(double x)
+{
+    double x2 = x*x;
+    return _a[3]*x2*x + _a[2]*x2 + _a[1]*x + _a[0];
+}
+
+Ganash::Math::Polynomial Ganash::Math::Polynomial::Generic::d()
+{
+    return Ganash::Math::Polynomial(_a[1], 2 * _a[2], 3 * _a[3]);
+}
+
+std::vector<double> Ganash::Math::Polynomial::Generic::roots()
+{
+    return std::vector<double>();
+}
+
+void Ganash::Math::Polynomial::Generic::toStream(std::ostream &stream) const
+{
+    char pow[] = "⁰¹²³⁴⁵⁶⁷⁸⁹";
+    for(int i = _a.size() ; i > 0; --i)
+    {
+        stream << _a[i] << "x" << pow[i];
+        if(i>0)
+        {
+            stream << " + " ;
+        }
+    }
+}
+

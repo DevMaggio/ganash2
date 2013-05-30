@@ -1,0 +1,13 @@
+
+#welcome {
+	background-image: -gtk-gradient (linear, center top, center bottom, from(#FFFFFF), to(#E0E0E0));
+}
+#welcome_description {
+	color: #808080;
+	font: Sans 8;
+}
+#welcome_title {
+	color: #707070;
+	font-weight: bold;
+	font: Sans 16;
+}

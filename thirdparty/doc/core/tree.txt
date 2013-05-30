@@ -1,0 +1,150 @@
+
+Tree Object :
+-------------
+
+Ganash::Application
+  |
+  +--> Ganash::Window
+  |      |
+  |      +--> Ganash::ActionManager (based on Gtk::UIManager)
+  |      |      |
+  |      |      +--> Ganash::ActionContainer
+  |      |      +--> Ganash::ActionGroup
+  |      |      +--> Ganash::Action
+  |      |      |      |
+  |      |      |      +--> Ganash::Command
+  |      |      |      |
+  |      |      |
+  |      +--> Ganash::ContainerManager
+  |      |      |
+  |      |      +--> Ganash::DockManager (based on Gdl::DockMaster)
+  |      |      |
+  |      |
+  |
+
+
+
+
+
+Tree Layout :
+-------------
+plugin {
+	widget_properties : 
+	widget_foo : 
+	widget_bar : 
+}
+
+org.ganash/Main
+org.ganash.plugin.welcome/Main
+org.ganash.plugin.illustrator/Main
+org.ganash.plugin.animator/Main
+
+
+<dock-layout>
+	<layout name="__default__">
+		<dock name="__dock_1" floating="no" width="-1" height="-1" floatx="0" floaty="0">
+			<item name="plugin.welcome.Main/1.0" orientation="vertical" locked="no" />
+		</dock>
+	</layout>
+</dock-layout>
+
+
+<dock>
+	<layout name="__default__">
+		<dock name="__dock_1" floating="no" width="-1" height="-1" floatx="0" floaty="0">
+			<item name="plugin.welcome.Main/1.0" orientation="vertical" locked="no" />
+		</dock>
+	</layout>
+</dock>
+
+<ui>
+	<layout name="__default">
+		<dock name="__dock_1" floating="no" width="-1" height="-1" floatx="0" floaty="0">
+			<item name="plugin.welcome.Main/1.0" orientation="vertical" locked="no" />
+		</dock>
+	</layout>
+</ui>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<plugin name="Welcome" version="GANASH_VERSION" compatVersion="GANASH_VERSION">
+    <vendor>Nokia Corporation</vendor>
+    <copyright>(C) 2011 Nokia Corporation</copyright>
+    <license>
+Commercial Usage
+
+Licensees holding valid Qt Commercial licenses may use this plugin in accordance with the Qt Commercial License Agreement provided with the Software or, alternatively, in accordance with the terms contained in a written agreement between you and Nokia.
+
+GNU Lesser General Public License Usage
+
+Alternatively, this plugin may be used under the terms of the GNU Lesser General Public License version 2.1 as published by the Free Software Foundation.  Please review the following information to ensure the GNU Lesser General Public License version 2.1 requirements will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+    </license>
+    <category>Ganash</category>
+    <description>Default Welcome Screen Plugin</description>
+    <url>http://ganash.gnome.org</url>
+    <dependencyList>
+	<dependency name="Core" version="GANASH_VERSION"/>
+    </dependencyList>
+    <requires>
+	    <plugin name="org.ganash.xerces"/>
+	    <plugin name="org.ganash.core.resources"/>
+	    <plugin name="org.ganash.update.core"/>
+	    <plugin name="org.ganash.text" export="true"/>
+	    <plugin name="org.ganash.ui.workbench.texteditor" export="true"/>
+	    <plugin name="org.ganash.ui.editors" export="true"/>
+    </requires>
+
+    <ui>
+	<menubar name='MenuBar'>
+	    <menu action='FileMenu'>
+		<menu action='FileNew'>
+		    <menuitem action='FileNewBaz'/>
+		</menu>
+	    </menu>
+	</menubar>
+    </ui>
+
+    <dock-layout>
+	<layout name="__default__">
+	    <dock name="__dock_1" floating="no" width="-1" height="-1" floatx="0" floaty="0">
+		<paned orientation="vertical" locked="no">
+		    <paned orientation="horizontal" locked="no" position="34">
+			<item name="tools" orientation="vertical" locked="no" shrink="no" resize="no"/>
+			<paned orientation="horizontal" locked="no" position="1024">
+			    <item name="main" orientation="vertical" locked="no" />
+			    <paned orientation="vertical" locked="no" position="127" resize="no">
+				<item name="properties_a" orientation="vertical" locked="no" resize="yes"/>
+				<item name="properties_b" orientation="vertical" locked="no" resize="yes"/>
+			    </paned>
+			</paned>
+		    </paned>
+		    <item name="bottom" orientation="vertical" locked="yes"  height="40"/>
+		</paned>
+	    </dock>
+	</layout>
+    </dock-layout>
+
+</plugin>
+

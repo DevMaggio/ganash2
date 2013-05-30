@@ -1,0 +1,371 @@
+<!-- ##### SECTION Title ##### -->
+GdlDockObject
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### MACRO GDL_DOCK_OBJECT_ATTACHED ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO GDL_DOCK_OBJECT_AUTOMATIC ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO GDL_DOCK_OBJECT_FLAGS ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO GDL_DOCK_OBJECT_FLAGS_SHIFT ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO GDL_DOCK_OBJECT_FROZEN ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO GDL_DOCK_OBJECT_IN_DETACH ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO GDL_DOCK_OBJECT_IN_REFLOW ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO GDL_DOCK_OBJECT_SET_FLAGS ##### -->
+<para>
+
+</para>
+
+@obj: 
+@flag: 
+
+
+<!-- ##### MACRO GDL_DOCK_OBJECT_UNSET_FLAGS ##### -->
+<para>
+
+</para>
+
+@obj: 
+@flag: 
+
+
+<!-- ##### MACRO GDL_TRACE_OBJECT ##### -->
+<para>
+
+</para>
+
+@object: 
+@format: 
+@...: 
+
+
+<!-- ##### STRUCT GdlDockObject ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL GdlDockObject::detach ##### -->
+<para>
+
+</para>
+
+@gdldockobject: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL GdlDockObject::dock ##### -->
+<para>
+
+</para>
+
+@gdldockobject: the object which received the signal.
+@arg1: 
+@arg2: 
+@arg3: 
+
+<!-- ##### ARG GdlDockObject:long-name ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockObject:master ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockObject:name ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockObject:pixbuf-icon ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GdlDockObject:stock-id ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT GdlDockObjectClass ##### -->
+<para>
+
+</para>
+
+@parent_class: 
+@priv: 
+@detach: 
+@reduce: 
+@dock_request: 
+@dock: 
+@reorder: 
+@present: 
+@child_placement: 
+
+<!-- ##### ENUM GdlDockObjectFlags ##### -->
+<para>
+
+</para>
+
+@GDL_DOCK_AUTOMATIC: 
+@GDL_DOCK_ATTACHED: 
+@GDL_DOCK_IN_REFLOW: 
+@GDL_DOCK_IN_DETACH: 
+
+<!-- ##### ENUM GdlDockParamFlags ##### -->
+<para>
+
+</para>
+
+@GDL_DOCK_PARAM_EXPORT: 
+@GDL_DOCK_PARAM_AFTER: 
+
+<!-- ##### ENUM GdlDockPlacement ##### -->
+<para>
+
+</para>
+
+@GDL_DOCK_NONE: 
+@GDL_DOCK_TOP: 
+@GDL_DOCK_BOTTOM: 
+@GDL_DOCK_RIGHT: 
+@GDL_DOCK_LEFT: 
+@GDL_DOCK_CENTER: 
+@GDL_DOCK_FLOATING: 
+
+<!-- ##### STRUCT GdlDockRequest ##### -->
+<para>
+
+</para>
+
+@applicant: 
+@target: 
+@position: 
+@rect: 
+@extra: 
+
+<!-- ##### FUNCTION gdl_dock_object_bind ##### -->
+<para>
+
+</para>
+
+@object: 
+@master: 
+
+
+<!-- ##### FUNCTION gdl_dock_object_child_placement ##### -->
+<para>
+
+</para>
+
+@object: 
+@child: 
+@placement: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_object_detach ##### -->
+<para>
+
+</para>
+
+@object: 
+@recursive: 
+
+
+<!-- ##### FUNCTION gdl_dock_object_dock ##### -->
+<para>
+
+</para>
+
+@object: 
+@requestor: 
+@position: 
+@other_data: 
+
+
+<!-- ##### FUNCTION gdl_dock_object_dock_request ##### -->
+<para>
+
+</para>
+
+@object: 
+@x: 
+@y: 
+@request: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_object_freeze ##### -->
+<para>
+
+</para>
+
+@object: 
+
+
+<!-- ##### FUNCTION gdl_dock_object_get_parent_object ##### -->
+<para>
+
+</para>
+
+@object: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_object_is_bound ##### -->
+<para>
+
+</para>
+
+@object: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_object_is_compound ##### -->
+<para>
+
+</para>
+
+@object: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_object_nick_from_type ##### -->
+<para>
+
+</para>
+
+@type: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_object_present ##### -->
+<para>
+
+</para>
+
+@object: 
+@child: 
+
+
+<!-- ##### FUNCTION gdl_dock_object_reduce ##### -->
+<para>
+
+</para>
+
+@object: 
+
+
+<!-- ##### FUNCTION gdl_dock_object_reorder ##### -->
+<para>
+
+</para>
+
+@object: 
+@child: 
+@new_position: 
+@other_data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_object_set_type_for_nick ##### -->
+<para>
+
+</para>
+
+@nick: 
+@type: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_object_thaw ##### -->
+<para>
+
+</para>
+
+@object: 
+
+
+<!-- ##### FUNCTION gdl_dock_object_type_from_nick ##### -->
+<para>
+
+</para>
+
+@nick: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gdl_dock_object_unbind ##### -->
+<para>
+
+</para>
+
+@object: 
+
+

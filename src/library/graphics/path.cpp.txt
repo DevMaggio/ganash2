@@ -1,0 +1,113 @@
+/**
+ * This file is part of Ganash
+ *
+ * Copyright (C) 2012  Sergio DE VASCONCELOS
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2
+ * as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+ */
+
+#include "path.h"
+#include <iostream>
+
+Ganash::Graphics::Path::Path() :
+    Ganash::Graphics::Item()
+{
+
+}
+
+void Ganash::Graphics::Path::render(Ganash::Graphics::Renderer *renderer)
+{
+    //cr->save();
+    //cr->set_source_rgba(1.0, 0.0, 1.0, 1.0);
+    std::cout << "Ganash::Graphics::Path::render : " <<  _dataPath._commands.size() << std::endl;
+
+    //Ganash::Graphics::DataPath::CommandType command;
+    int command;
+    int iData = 0;
+    for(int i = 0; i<_dataPath._commands.size(); i+=1)
+    {
+        command = _dataPath._commands.at(i);
+        switch(command)
+        {
+        case Ganash::Graphics::DataPath::MoveTo :
+            renderer->moveTo(_dataPath._datas[iData], _dataPath._datas[iData+1]);
+            iData += 2;
+            break;
+        case Ganash::Graphics::DataPath::LineTo :
+            renderer->lineTo(_dataPath._datas[iData], _dataPath._datas[iData+1]);
+            iData += 2;
+            break;
+        }
+    }
+
+    renderer->fill();
+    renderer->stroke();
+    //cr->restore();
+}
+
+/*
+
+Ganash::Graphics::DataPath * Ganash::Graphics::Path::data()
+{
+	return m_dataPath;
+}
+
+QGraphicsPathItem * Ganash::Graphics::Path::render(QGraphicsPathItem * graphicPath)
+{
+  if(graphicPath==0)
+    {
+      graphicPath = m_graphicPath;
+    }
+
+  QPainterPath path = QPainterPath();
+
+    Ganash::Graphics::DataPathCommand::Type command;
+	int iData = 0;
+	for(int i = 0; i<m_dataPath->commandCount(); i+=1) {
+		command = m_dataPath->commandAt(i);
+		switch(command)
+		{
+        case Ganash::Graphics::DataPathCommand::WideTo :
+			break;
+        case Ganash::Graphics::DataPathCommand::MoveTo :
+			path.moveTo(m_dataPath->m_data[iData], m_dataPath->m_data[iData+1]);
+			iData += 2;
+			break;
+        case Ganash::Graphics::DataPathCommand::LineTo :
+			path.lineTo(m_dataPath->m_data[iData], m_dataPath->m_data[iData+1]);
+			iData += 2;
+			break;
+        case Ganash::Graphics::DataPathCommand::QuadTo :
+			path.quadTo(m_dataPath->m_data[iData], m_dataPath->m_data[iData+1],
+					m_dataPath->m_data[iData+2], m_dataPath->m_data[iData+3]);
+			iData += 4;
+			break;
+        case Ganash::Graphics::DataPathCommand::CubicTo :
+			path.cubicTo(m_dataPath->m_data[iData], m_dataPath->m_data[iData+1],
+					m_dataPath->m_data[iData+2], m_dataPath->m_data[iData+3],
+					m_dataPath->m_data[iData+4], m_dataPath->m_data[iData+5]);
+			iData += 6;
+			break;
+		default:
+			std::cout << "Error Unknow command" << std::endl;
+			break;
+		}
+	}
+
+	graphicPath->setPath(path);
+
+	return graphicPath;
+}
+
+*/
