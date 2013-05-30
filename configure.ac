@@ -28,7 +28,7 @@ LT_INIT
 # Checks for libraries.
 
 PKG_CHECK_MODULES(GTK, gtkmm-3.0 >= 3.4, with_gtkmm_3_0=yes, with_gtkmm_3_0=no)
-AC_SUBST(GTK_CPPFLAGS)
+AC_SUBST(GTK_CFLAGS)
 AC_SUBST(GTK_LIBS)
 
 AC_ARG_WITH(shared-gdl,

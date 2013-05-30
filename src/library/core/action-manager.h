@@ -4,7 +4,7 @@
 #include "core/action-container.h"
 #include "core/action.h"
 #include <libxml/tree.h>
-#include <glib.h>
+#include <glibmm.h>
 #include <gtkmm/uimanager.h>
 
 

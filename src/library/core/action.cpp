@@ -1,7 +1,6 @@
 #include "core/action.h"
 
-#include <glib.h>
-#include <glib/gprintf.h>
+#include <glibmm.h>
 
 namespace Ganash {
 namespace Core {
